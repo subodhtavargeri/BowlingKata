@@ -103,4 +103,14 @@ class GameTests: XCTestCase {
         game?.getscore()
         XCTAssertEqual(game?.score, 300)
     }
+    
+    func test_GameScoreIsTwentySeven_WhenPlayerScoresFivePinsThenFivePinsThenFivePinsThenFivePinsThenOnePins_ZeroInLastFifteenRolls_TwoSpareCondition() {
+        let pinArray = [Pin.five,Pin.five,Pin.five,Pin.five,Pin.one]
+        loopThroughGameRollBalls(Pins: pinArray)
+        rollBalls(knockedPins: .zero, roll: 15)
+        
+        game?.getscore()
+        
+        XCTAssertEqual(game?.score, 27)
+    }
 }
