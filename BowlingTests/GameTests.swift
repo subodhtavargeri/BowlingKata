@@ -14,8 +14,7 @@ class GameTests: XCTestCase {
     }
     
     private func rollBalls(knockedPins: Int, roll: Int) {
-        for index in 1...roll {
-            print("index::\(index)")
+        for _ in 1...roll {
             let _ = game?.rollBalls(pins: knockedPins)
         }
     }
@@ -29,6 +28,8 @@ class GameTests: XCTestCase {
     func test_GameScoreIsTwenty_WhenPlayerKnocksOnePin_InAllTwentyRolls() {
         rollBalls(knockedPins: 1, roll: 20)
         
+        game?.getscore()
+        
         XCTAssertEqual(game?.score, 20)
     }
     
@@ -38,6 +39,8 @@ class GameTests: XCTestCase {
         game?.rollBalls(pins: 1)
         game?.rollBalls(pins: 5)
         game?.rollBalls(pins: 2)
+        
+        game?.getscore()
         
         XCTAssertEqual(game?.score, 12)
     }

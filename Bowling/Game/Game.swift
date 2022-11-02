@@ -18,7 +18,7 @@ class Game {
         for _ in 1...10 {
             let frameScore = rolls[rollIndex] + rolls[rollIndex+1]
             if isSpare(frameScore: frameScore) {
-                score += frameScore + rolls[rollIndex+2]
+                spareBonusScore(rollIndex: rollIndex, frameScore: frameScore)
             }
             else {
                 score += frameScore
@@ -29,5 +29,9 @@ class Game {
     
     private func isSpare(frameScore: Int)-> Bool {
         return frameScore == 10
+    }
+    
+    private func spareBonusScore(rollIndex: Int, frameScore: Int) {
+        score += frameScore + rolls[rollIndex+2]
     }
 }
