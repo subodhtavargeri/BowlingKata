@@ -1,14 +1,18 @@
+enum Pin: Int {
+    case zero = 0, one, two, three, four, five, six, seven, eight, nine, ten
+}
+
 class Game {
     
     private (set) var score: Int
-    
-    private var rolls = [Int]()
+     
+    private var rolls = [Pin]()
     
     init() {
         score = 0
     }
     
-    func rollBalls(pins: Int) {
+    func rollBalls(pins: Pin) {
         rolls.append(pins)
     }
     
@@ -23,8 +27,7 @@ class Game {
                 continue
             }
             
-            let frameScore = rolls[rollIndex] + rolls[rollIndex+1]
-            if isSpare(frameScore: frameScore) {
+            if isSpare(rollIndex: rollIndex) {
                 score += spareBonusScore(rollIndex: rollIndex)
             }
             else {
@@ -35,20 +38,21 @@ class Game {
     }
     
     private func normalScore(rollIndex: Int)-> Int {
-        return rolls[rollIndex] + rolls[rollIndex+1]
+        return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue
     }
-    private func isSpare(frameScore: Int)-> Bool {
+    private func isSpare(rollIndex: Int)-> Bool {
+        let frameScore = rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue
         return frameScore == 10
     }
     
     private func spareBonusScore(rollIndex: Int)-> Int {
-        return rolls[rollIndex] + rolls[rollIndex+1] + rolls[rollIndex+2]
+        return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue + rolls[rollIndex+2].rawValue
     }
     
-    private func isStrike(score: Int)-> Bool {
-        return score == 10
+    private func isStrike(score: Pin)-> Bool {
+        return score.rawValue == 10
     }
     private func strikeBonusScore(rollIndex: Int)-> Int {
-        return rolls[rollIndex]  + rolls[rollIndex + 1]  + rolls[rollIndex + 2]
+        return rolls[rollIndex].rawValue  + rolls[rollIndex + 1].rawValue  + rolls[rollIndex + 2].rawValue
     }
 }
