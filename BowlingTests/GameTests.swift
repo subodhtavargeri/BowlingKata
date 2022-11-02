@@ -84,5 +84,16 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game?.score, 29)
     }
     
-
+    func test_GameScoreIsFourtyEight_WhenPlayerScoresThreePinsInFirstFourRolls_ThenOnePinInNextFourRolls_ThenFivePinsInNextTwoRolls_TwoPinsInLastTenRolls_SpareConditionInMiddle() {
+        rollBalls(knockedPins: 3, roll: 4)
+        rollBalls(knockedPins: 1, roll: 4)
+        
+        game?.rollBalls(pins: 5)
+        game?.rollBalls(pins: 5)
+        rollBalls(knockedPins: 2, roll: 10)
+        
+        game?.getscore()
+        XCTAssertEqual(game?.score, 48)
+    }
+    
 }
