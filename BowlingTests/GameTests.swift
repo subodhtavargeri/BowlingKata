@@ -17,4 +17,11 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.score, 0)
     }
     
+    func test_GameScoreIsTwenty_WhenPlayerKnocksOnePin_InAllTwentyRolls() {
+        for _ in 1...20 {
+            let _ = game.roll(pins: 1)
+        }
+        
+        XCTAssertEqual(game.score, 20)
+    }
 }
