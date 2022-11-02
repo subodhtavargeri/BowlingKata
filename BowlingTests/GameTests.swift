@@ -45,12 +45,12 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game?.score, 12)
     }
     
-    func test_GameScoreIsSixteen_WhenPlayerKnockFiveThenFiveThenThree_InAllTwentOneRolls_SpareCondition() {
+    func test_GameScoreIsSixteen_WhenPlayerKnockFiveThenFiveThenThree_InAllTwentOneRolls_SpareConditionInBeginning() {
         
         game?.rollBalls(pins: 5)
         game?.rollBalls(pins: 5)
         game?.rollBalls(pins: 3)
-        rollBalls(knockedPins: 0, roll: 18)
+        rollBalls(knockedPins: 0, roll: 17)
         
         game?.getscore()
         XCTAssertEqual(game?.score, 16)
@@ -61,5 +61,26 @@ class GameTests: XCTestCase {
         
         game?.getscore()
         XCTAssertEqual(game?.score, 150)
+    }
+    
+    func test_GameScoreIsThirtyThree_WhenPlayerKnocksOneInFirstEighteenRolls_FiveInLastTwoRolls_SpareConditionAtEnd() {
+        rollBalls(knockedPins: 1, roll: 18)
+        
+        game?.rollBalls(pins: 5)
+        game?.rollBalls(pins: 5)
+        game?.rollBalls(pins: 5)
+        
+        game?.getscore()
+        XCTAssertEqual(game?.score, 33)
+    }
+    
+    func test_GameScoreIsSixteen_WhenPlayerKnockFiveTh902983082390823() {
+        game?.rollBalls(pins: 5)
+        game?.rollBalls(pins: 5)
+
+        rollBalls(knockedPins: 1, roll: 18)
+ 
+        game?.getscore()
+        XCTAssertEqual(game?.score, 29)
     }
 }
