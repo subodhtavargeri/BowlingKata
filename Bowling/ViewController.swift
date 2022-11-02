@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Bowling
-//
-//  Created by Subodh Tavargeri on 02/11/22.
-//
-
 import UIKit
 
 class ViewController: UIViewController {

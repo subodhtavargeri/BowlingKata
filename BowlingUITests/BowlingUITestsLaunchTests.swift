@@ -1,10 +1,3 @@
-//
-//  BowlingUITestsLaunchTests.swift
-//  BowlingUITests
-//
-//  Created by Subodh Tavargeri on 02/11/22.
-//
-
 import XCTest
 
 class BowlingUITestsLaunchTests: XCTestCase {
