@@ -30,4 +30,13 @@ class GameTests: XCTestCase {
         
         XCTAssertEqual(game?.score, 20)
     }
+    
+    func test_GameScoreIsTwelve_WhenPlayerKnocksFourThenOneThenFiveThenTwoPins_InFirstFourRolls() {
+        game?.rollBalls(pins: 4)
+        game?.rollBalls(pins: 1)
+        game?.rollBalls(pins: 5)
+        game?.rollBalls(pins: 2)
+        
+        XCTAssertEqual(game?.score, 12)
+    }
 }
