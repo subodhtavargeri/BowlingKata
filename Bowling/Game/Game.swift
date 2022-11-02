@@ -10,13 +10,18 @@ class Game {
     
     func rollBalls(pins: Int) {
         rolls.append(pins)
-        
     }
     
     func getscore() {
         var rollIndex = 0
         for _ in 1...10 {
             let frameScore = rolls[rollIndex] + rolls[rollIndex+1]
+            
+            if rolls[rollIndex] == 10 {
+                score += rolls[rollIndex]  + rolls[rollIndex + 1]  + rolls[rollIndex + 2]
+                rollIndex+=1
+                continue
+            }
             if isSpare(frameScore: frameScore) {
                 spareBonusScore(rollIndex: rollIndex, frameScore: frameScore)
             }
