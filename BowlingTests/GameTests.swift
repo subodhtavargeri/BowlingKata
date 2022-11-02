@@ -95,8 +95,8 @@ class GameTests: XCTestCase {
         game?.getscore()
         XCTAssertEqual(game?.score, 48)
     }
- 
-    func test_GameScoreIsThreeHundred_WhenPlayerScoresTeninAllTwentyTwoRolls_StrikeThroughtOut() {
+    
+    func test_GameScoreIsThreeHundred_WhenPlayerScoresTenInAllTwelveRolls_StrikeThroughtOut() {
         rollBalls(knockedPins: 10, roll: 12)
         
         game?.getscore()

@@ -17,7 +17,7 @@ class Game {
         for _ in 1...10 {
             let frameScore = rolls[rollIndex] + rolls[rollIndex+1]
             
-            if rolls[rollIndex] == 10 {
+            if isStrike(score: rolls[rollIndex]) {
                 score += rolls[rollIndex]  + rolls[rollIndex + 1]  + rolls[rollIndex + 2]
                 rollIndex+=1
                 continue
@@ -38,5 +38,9 @@ class Game {
     
     private func spareBonusScore(rollIndex: Int, frameScore: Int) {
         score += frameScore + rolls[rollIndex+2]
+    }
+    
+    private func isStrike(score: Int)-> Bool {
+        return score == 10
     }
 }
