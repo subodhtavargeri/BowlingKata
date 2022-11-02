@@ -55,4 +55,11 @@ class GameTests: XCTestCase {
         game?.getscore()
         XCTAssertEqual(game?.score, 16)
     }
+    
+    func test_GameScoreIsOneHundredAndFifty_WhenPlayerKnocksFivePinsInAllTwentyOneRolls_SpareCondition() {
+        rollBalls(knockedPins: 5, roll: 21)
+        
+        game?.getscore()
+        XCTAssertEqual(game?.score, 150)
+    }
 }
