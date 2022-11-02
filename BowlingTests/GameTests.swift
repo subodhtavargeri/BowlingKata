@@ -9,10 +9,10 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.score, 0)
     }
     
-    func test_PlayerScoreIsZero_WhenPlayerDoesNotKnockAnyPins_InAllTenFrames() {
+    func test_GameScoreIsZero_WhenPlayerDoesNotKnockAnyPins_InAllTwentyFrames() {
         let game = Game()
         
-        for _ in 1...10 {
+        for _ in 1...20 {
             let _ = game.roll(pins: 0)
         }
         
