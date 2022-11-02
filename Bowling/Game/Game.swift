@@ -25,7 +25,7 @@ class Game {
             let frameScore = rolls[rollIndex] + rolls[rollIndex+1]
             
             if isSpare(frameScore: frameScore) {
-                spareBonusScore(rollIndex: rollIndex, frameScore: frameScore)
+                spareBonusScore(rollIndex: rollIndex)
             }
             else {
                 score += frameScore
@@ -38,8 +38,8 @@ class Game {
         return frameScore == 10
     }
     
-    private func spareBonusScore(rollIndex: Int, frameScore: Int) {
-        score += frameScore + rolls[rollIndex+2]
+    private func spareBonusScore(rollIndex: Int) {
+        score += rolls[rollIndex] + rolls[rollIndex+1] + rolls[rollIndex+2]
     }
     
     private func isStrike(score: Int)-> Bool {
