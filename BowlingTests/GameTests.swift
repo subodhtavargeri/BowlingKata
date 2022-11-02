@@ -6,7 +6,7 @@ class GameTests: XCTestCase {
     func test_GameScoreIsZero_WhenGameBegins() {
         let game = Game()
         
-        XCTAssertEqual(game.getScore(), 0)
+        XCTAssertEqual(game.score, 0)
     }
     
     func test_PlayerScoreIsZero_WhenPlayerDoesNotKnockAnyPins_InAllTenFrames() {
@@ -16,7 +16,7 @@ class GameTests: XCTestCase {
             let _ = game.roll(pins: 0)
         }
         
-        XCTAssertEqual(game.getScore(), 0)
+        XCTAssertEqual(game.score, 0)
     }
     
 }

@@ -1,6 +1,6 @@
 class Game {
     
-    private var score: Int
+    private (set) var score: Int
     
     init() {
         score = 0
@@ -10,7 +10,4 @@ class Game {
         score += pins
     }
     
-    func getScore() -> Int {
-        return score
-    }
 }
