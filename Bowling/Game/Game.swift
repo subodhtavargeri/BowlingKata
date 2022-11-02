@@ -17,7 +17,7 @@ class Game {
         var rollIndex = 0
         for _ in 1...10 {
             let frameScore = rolls[rollIndex] + rolls[rollIndex+1]
-            if frameScore == 10 {
+            if isSpare(frameScore: frameScore) {
                 score += frameScore + rolls[rollIndex+2]
             }
             else {
@@ -25,5 +25,9 @@ class Game {
             }
             rollIndex+=2
         }
+    }
+    
+    private func isSpare(frameScore: Int)-> Bool {
+        return frameScore == 10
     }
 }
