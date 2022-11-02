@@ -6,7 +6,7 @@ class Game {
         score = 0
     }
     
-    func roll(pins: Int) {
+    func rollBalls(pins: Int) {
         score += pins
     }
     
