@@ -3,10 +3,11 @@ import XCTest
 
 class GamePresenterTests: XCTestCase {
     let game = GameSpy()
+    let view = BowlingViewControllerSpy()
     var presenter: GamePresenter?
     
     override func setUp() {
-        presenter = GamePresenter(game: game)
+        presenter = GamePresenter(game: game, view: view)
     }
     
     func test_PlayerRollsScoreIsTwo_WhenPlayerKnocksTwoPin() {
@@ -27,4 +28,9 @@ class GamePresenterTests: XCTestCase {
         XCTAssertEqual(game.calculateScore(), 20)
     }
     
+    func test_PinScoreIsDisplayed_WhenPlayerKnocksTwoPin() {
+        presenter?.playerRolls(knockedPins: 2)
+        
+        XCTAssertEqual(view.title, String(2))
+    }
 }

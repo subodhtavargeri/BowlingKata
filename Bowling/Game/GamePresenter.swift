@@ -1,9 +1,11 @@
 class GamePresenter {
     
     let game: GameProtocol
+    let view: BowlingViewProtocol
     
-    init(game: GameProtocol) {
+    init(game: GameProtocol, view: BowlingViewProtocol) {
         self.game = game
+        self.view = view
     }
     
     func playerRolls(knockedPins: Int) {
@@ -12,6 +14,7 @@ class GamePresenter {
         }
         
         game.rollBalls(pins: pin)
+        view.displayPinRollTitle(title: pin.pinSymbols())
     }
     
     func getGameFinalScore() {
