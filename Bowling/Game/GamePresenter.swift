@@ -13,4 +13,8 @@ class GamePresenter {
         
         game.rollBalls(pins: pin)
     }
+    
+    func getGameFinalScore() {
+        let _ = game.calculateScore()
+    }
 }

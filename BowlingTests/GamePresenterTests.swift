@@ -21,4 +21,10 @@ class GamePresenterTests: XCTestCase {
         XCTAssertEqual(game.pins, Pin.zero)
     }
     
+    func test_GetGameFinalScore_WhenValidFrames() {
+        presenter?.getGameFinalScore()
+        
+        XCTAssertEqual(game.calculateScore(), 20)
+    }
+    
 }
