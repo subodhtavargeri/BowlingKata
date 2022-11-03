@@ -5,10 +5,15 @@ protocol GameProtocol {
 
 class Game {
     
-    private var rolls = [Pin]()
+    private var rolls: Roll
     
     func rollBalls(pins: Pin) {
-        rolls.append(pins)
+        rolls.append(pin: pins)
+        
+    }
+    
+    init() {
+        rolls = Roll(rolls: [Pin] ())
     }
     
     func calculateScore() -> Score {
@@ -21,7 +26,7 @@ class Game {
                 return 0
             }
             
-            let rollScore = rolls[rollIndex]
+            let rollScore = rolls.rolls[rollIndex]
             
             if isStrike(score: rollScore) {
                 score += strikeScore(rollIndex: rollIndex)
@@ -43,19 +48,19 @@ class Game {
     }
     
     private func isValidIndex(rollIndex: Int) -> Bool {
-        return rolls.indices.contains(rollIndex)
+        return rolls.rolls.indices.contains(rollIndex)
     }
     
     private func normalScore(rollIndex: Int)-> Score {
-        return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue
+        return rolls.rolls[rollIndex].rawValue + rolls.rolls[rollIndex+1].rawValue
     }
     
     private func isSpare(rollIndex: Int)-> Bool {
-        return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue == Pin.ten.rawValue
+        return rolls.rolls[rollIndex].rawValue + rolls.rolls[rollIndex+1].rawValue == Pin.ten.rawValue
     }
     
     private func spareScore(rollIndex: Int)-> Score {
-        return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue + rolls[rollIndex+2].rawValue
+        return rolls.getRawValue(index: rollIndex) + rolls.getRawValue(index: rollIndex+1) +  rolls.getRawValue(index: rollIndex+2)
     }
     
     private func isStrike(score: Pin)-> Bool {
@@ -63,6 +68,6 @@ class Game {
     }
     
     private func strikeScore(rollIndex: Int)-> Score {
-        return rolls[rollIndex].rawValue  + rolls[rollIndex + 1].rawValue  + rolls[rollIndex + 2].rawValue
+        return rolls.rolls[rollIndex].rawValue  + rolls.rolls[rollIndex + 1].rawValue  + rolls.rolls[rollIndex + 2].rawValue
     }
 }
