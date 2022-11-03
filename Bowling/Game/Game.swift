@@ -32,10 +32,9 @@ class Game {
                 rollIndex+=2
                 continue
             }
-            else {
-                score += normalScore(rollIndex: rollIndex)
-                rollIndex+=2
-            }
+            
+            score += normalScore(rollIndex: rollIndex)
+            rollIndex+=2
         }
     }
     
