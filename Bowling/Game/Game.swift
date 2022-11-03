@@ -24,6 +24,11 @@ class Game {
     func calculateScore() -> Int {
         var rollIndex = 0
         for _ in 1...10 {
+            
+            if !isValidIndex(rollIndex: rollIndex) {
+                return 0
+            }
+            
             let rollScore = rolls[rollIndex]
             
             if isStrike(score: rollScore) {
@@ -42,6 +47,10 @@ class Game {
             rollIndex+=2
         }
         return score
+    }
+    
+    private func isValidIndex(rollIndex: Int) -> Bool {
+        return rolls.indices.contains(rollIndex)
     }
     
     private func normalScore(rollIndex: Int)-> Int {
