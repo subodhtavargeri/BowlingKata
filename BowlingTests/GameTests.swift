@@ -4,11 +4,10 @@ import XCTest
 class GameTests: XCTestCase {
     
     var game: Game?
+    let pin = RollSpy()
     
     override func setUp() {
-        let pin = [Pin]()
-        let roll = Roll(rolls: pin)
-        game = Game(roll: roll)
+        game = Game(roll: pin)
     }
     
     func test_GameScoreIsZero_WhenGameBegins() {
@@ -143,4 +142,12 @@ class GameTests: XCTestCase {
         
         XCTAssertEqual(originalScore, 26)
     }
+    
+    //    func test_RollCountIsZero_WhenGameBegins() {
+    //        let pin = [Pin]()
+    //      //  let role = Roll(rolls: pin)
+    //        let game = Game(roll: role)
+    //
+    //       // XCTAssertEqual(game?.r, <#T##expression2: Equatable##Equatable#>)
+    //    }
 }

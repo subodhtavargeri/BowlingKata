@@ -5,13 +5,13 @@ protocol GameProtocol {
 
 class Game {
     
-    private var roll: Roll
+    private var roll: RollProtocol
     
     func rollBalls(pins: Pin) {
         roll.append(pin: pins)
     }
     
-    init(roll: Roll) {
+    init(roll: RollProtocol) {
         self.roll = roll
     }
     
@@ -25,7 +25,7 @@ class Game {
                 return 0
             }
             
-            let rollScore = roll.rolls[rollIndex]
+            let rollScore = roll.atIndex(index: rollIndex)
             
             if isStrike(score: rollScore) {
                 score += strikeScore(rollIndex: rollIndex)
@@ -47,7 +47,7 @@ class Game {
     }
     
     private func isValidIndex(rollIndex: Int) -> Bool {
-        return roll.rolls.indices.contains(rollIndex)
+        return roll.isValidIndex(rollIndex: rollIndex)
     }
     
     private func normalScore(rollIndex: Int)-> Score {
@@ -69,4 +69,5 @@ class Game {
     private func strikeScore(rollIndex: Int)-> Score {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + 1) + roll.getRawValue(index: rollIndex + 2)
     }
+    
 }
