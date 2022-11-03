@@ -51,4 +51,10 @@ class GamePresenterTests: XCTestCase {
         
         XCTAssertEqual(view.score, "20")
     }
+    
+    func test_DisplayViewTitle_WhenPresenterLoads() {
+        presenter?.loadPresenter()
+        
+        XCTAssertEqual(view.title, Constant.Title.screenTitle)
+    }
 }

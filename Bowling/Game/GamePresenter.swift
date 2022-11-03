@@ -21,4 +21,12 @@ class GamePresenter {
         let gameScore = game.calculateScore()
         view.displayFinalGameScore(score: String(gameScore))
     }
+    
+    func loadPresenter() {
+        displayViewTitle()
+    }
+    
+    private func displayViewTitle() {
+        view.displayViewTitle(title: Constant.Title.screenTitle)
+    }
 }

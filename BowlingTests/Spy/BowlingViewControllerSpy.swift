@@ -13,5 +13,9 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
         self.score = score
     }
     
+    func displayViewTitle(title: String) {
+        self.title = title
+    }
+    
 }
 

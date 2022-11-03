@@ -13,3 +13,11 @@ enum Pin: Int {
         return String(rawValue)
     }
 }
+
+
+struct Constant {
+    
+    struct Title {
+        static let screenTitle = "Bowling"
+    }
+}
