@@ -10,6 +10,7 @@
 		5B490A782913A7F6003FEA73 /* GamePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A772913A7F6003FEA73 /* GamePresenterTests.swift */; };
 		5B490A7A2913A86F003FEA73 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A792913A86F003FEA73 /* GamePresenter.swift */; };
 		5B490A7D2913A9BF003FEA73 /* GameSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A7C2913A9BF003FEA73 /* GameSpy.swift */; };
+		5B490A7F2913C453003FEA73 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A7E2913C453003FEA73 /* Constant.swift */; };
 		5BBAC7CA29123EFA008D793A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAC7C929123EFA008D793A /* AppDelegate.swift */; };
 		5BBAC7CC29123EFA008D793A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAC7CB29123EFA008D793A /* SceneDelegate.swift */; };
 		5BBAC7CE29123EFA008D793A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAC7CD29123EFA008D793A /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		5B490A772913A7F6003FEA73 /* GamePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterTests.swift; sourceTree = "<group>"; };
 		5B490A792913A86F003FEA73 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
 		5B490A7C2913A9BF003FEA73 /* GameSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSpy.swift; sourceTree = "<group>"; };
+		5B490A7E2913C453003FEA73 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5BBAC7C629123EFA008D793A /* Bowling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bowling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBAC7C929123EFA008D793A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BBAC7CB29123EFA008D793A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				5BBAC7D229123EFC008D793A /* Assets.xcassets */,
 				5BBAC7D429123EFC008D793A /* LaunchScreen.storyboard */,
 				5BBAC7D729123EFC008D793A /* Info.plist */,
+				5B490A7E2913C453003FEA73 /* Constant.swift */,
 			);
 			path = Bowling;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				5BBAC7CC29123EFA008D793A /* SceneDelegate.swift in Sources */,
 				5B490A7A2913A86F003FEA73 /* GamePresenter.swift in Sources */,
 				5BBAC7FD29124466008D793A /* Game.swift in Sources */,
+				5B490A7F2913C453003FEA73 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
