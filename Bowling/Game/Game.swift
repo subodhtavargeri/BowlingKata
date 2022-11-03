@@ -16,19 +16,19 @@ class Game {
         rolls.append(pins)
     }
     
-    func getscore() {
+    func calculateScore() {
         var rollIndex = 0
         for _ in 1...10 {
             let rollScore = rolls[rollIndex]
             
             if isStrike(score: rollScore) {
-                score += strikeBonusScore(rollIndex: rollIndex)
+                score += strikeScore(rollIndex: rollIndex)
                 rollIndex+=1
                 continue
             }
             
             if isSpare(rollIndex: rollIndex) {
-                score += spareBonusScore(rollIndex: rollIndex)
+                score += spareScore(rollIndex: rollIndex)
                 rollIndex+=2
                 continue
             }
@@ -47,7 +47,7 @@ class Game {
         return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue == 10
     }
     
-    private func spareBonusScore(rollIndex: Int)-> Int {
+    private func spareScore(rollIndex: Int)-> Int {
         return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue + rolls[rollIndex+2].rawValue
     }
     
@@ -55,7 +55,7 @@ class Game {
         return score.rawValue == 10
     }
     
-    private func strikeBonusScore(rollIndex: Int)-> Int {
+    private func strikeScore(rollIndex: Int)-> Int {
         return rolls[rollIndex].rawValue  + rolls[rollIndex + 1].rawValue  + rolls[rollIndex + 2].rawValue
     }
 }
