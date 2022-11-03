@@ -1,6 +1,7 @@
 protocol GameProtocol {
     func rollBalls(pins: Pin)
     func calculateScore() -> Int
+    func resetGame()
 }
 
 class Game {

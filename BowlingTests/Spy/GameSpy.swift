@@ -11,5 +11,9 @@ class GameSpy: GameProtocol {
     func rollBalls(pins: Pin) {
         self.pins = pins
     }
+    
+    func resetGame() {
+        self.pins = nil
+    }
 
 }
