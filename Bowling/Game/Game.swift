@@ -5,13 +5,7 @@ protocol GameProtocol {
 
 class Game {
     
-    private (set) var score: Int
-    
     private var rolls = [Pin]()
-    
-    init() {
-        score = 0
-    }
     
     func rollBalls(pins: Pin) {
         rolls.append(pins)
@@ -19,6 +13,8 @@ class Game {
     
     func calculateScore() -> Int {
         var rollIndex = 0
+        var score = 0
+        
         for _ in 1...10 {
             
             if !isValidIndex(rollIndex: rollIndex) {
@@ -42,6 +38,7 @@ class Game {
             score += normalScore(rollIndex: rollIndex)
             rollIndex+=2
         }
+        
         return score
     }
     
