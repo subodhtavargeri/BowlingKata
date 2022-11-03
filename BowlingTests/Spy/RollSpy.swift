@@ -20,10 +20,7 @@ class RollSpy: RollProtocol {
     }
     
     func pinValueAtIndex(index: Int)-> Pin {
-        if roll.indices.contains(index) {
-            return roll[index]
-        }
-        return .zero
+        return roll[index]
     }
     
     func isValidIndex(rollIndex: Int)-> Bool {

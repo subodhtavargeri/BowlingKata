@@ -191,4 +191,5 @@ class GameTests: XCTestCase {
         
         XCTAssertEqual(resetScore, 3)
     }
+    
 }
