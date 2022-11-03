@@ -1,6 +1,6 @@
 protocol GameProtocol {
     func rollBalls(pins: Pin)
-    func calculateScore() -> Int
+    func calculateScore()-> Int
     func resetGame()
 }
 
@@ -16,7 +16,7 @@ class Game {
         roll.append(pin: pins)
     }
     
-    func calculateScore() -> Score {
+    func calculateScore()-> Score {
         var rollIndex = 0
         var score = 0
         
@@ -26,7 +26,7 @@ class Game {
                 return 0
             }
             
-            let rollScore = roll.atIndex(index: rollIndex)
+            let rollScore = roll.pinValueAtIndex(index: rollIndex)
             
             if isStrike(score: rollScore) {
                 score += strikeScore(rollIndex: rollIndex)
@@ -51,7 +51,7 @@ class Game {
         roll.resetRoll()
     }
     
-    private func isValidIndex(rollIndex: Int) -> Bool {
+    private func isValidIndex(rollIndex: Int)-> Bool {
         return roll.isValidIndex(rollIndex: rollIndex)
     }
     

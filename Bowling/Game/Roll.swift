@@ -2,9 +2,9 @@
 protocol RollProtocol {
     mutating func append(pin: Pin)
     mutating func resetRoll()
-    func getRawValue(index: Int) -> Score
-    func atIndex(index: Int)-> Pin
-    func isValidIndex(rollIndex: Int) -> Bool
+    func getRawValue(index: Int)-> Score
+    func pinValueAtIndex(index: Int)-> Pin
+    func isValidIndex(rollIndex: Int)-> Bool
 }
 
 struct Roll : RollProtocol {
@@ -15,7 +15,7 @@ struct Roll : RollProtocol {
         rolls.append(pin)
     }
     
-    func getRawValue(index: Int) -> Score {
+    func getRawValue(index: Int)-> Score {
         return rolls[index].rawValue
     }
     
@@ -23,11 +23,11 @@ struct Roll : RollProtocol {
         rolls.removeAll()
     }
     
-    func atIndex(index: Int)-> Pin {
+    func pinValueAtIndex(index: Int)-> Pin {
         return rolls[index]
     }
     
-    func isValidIndex(rollIndex: Int) -> Bool {
+    func isValidIndex(rollIndex: Int)-> Bool {
         return rolls.indices.contains(rollIndex)
     }
 }
