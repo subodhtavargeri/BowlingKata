@@ -6,7 +6,9 @@ class GameTests: XCTestCase {
     var game: Game?
     
     override func setUp() {
-        game = Game()
+        let pin = [Pin]()
+        let role = Roll(rolls: pin)
+        game = Game(rool: role)
     }
     
     func test_GameScoreIsZero_WhenGameBegins() {

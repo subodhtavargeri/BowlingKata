@@ -11,8 +11,8 @@ class Game {
         rolls.append(pin: pins)
     }
     
-    init() {
-        rolls = Roll(rolls: [Pin] ())
+    init(roll: Roll) {
+        rolls = roll
     }
     
     func calculateScore() -> Score {
