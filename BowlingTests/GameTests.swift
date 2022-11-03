@@ -83,7 +83,7 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .one, roll: 18)
         
         game?.getscore()
-
+        
         XCTAssertEqual(game?.score, 29)
     }
     
@@ -126,4 +126,14 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game?.score, 30)
     }
     
+    func test_GameScoreIsTwentySix_WhenPlayerScoresTenInFirstRoll_ThenSevenAndOneInNextTwoRolls_ZeroInNextSixteenRools_StrikeInBeginning_26() {
+        rollBalls(knockedPins: .ten, roll: 1)
+        rollBalls(knockedPins: .seven, roll: 1)
+        rollBalls(knockedPins: .one, roll: 1)
+        rollBalls(knockedPins: .zero, roll: 16)
+        
+        game?.getscore()
+        
+        XCTAssertEqual(game?.score, 26)
+    }
 }
