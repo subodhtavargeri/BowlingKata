@@ -6,12 +6,14 @@ protocol GameProtocol {
 class Game {
     
     private var rolls = [Pin]()
+    typealias rollIndex = (rollIndex: Int)
+    typealias AppReducer = Reducer<AppState, AppAction, AppEnvironment> 
     
     func rollBalls(pins: Pin) {
         rolls.append(pins)
     }
     
-    func calculateScore() -> Int {
+    func calculateScore() -> Score {
         var rollIndex = 0
         var score = 0
         
@@ -46,7 +48,7 @@ class Game {
         return rolls.indices.contains(rollIndex)
     }
     
-    private func normalScore(rollIndex: Int)-> Int {
+    private func normalScore(rollIndex: Int)-> Score {
         return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue
     }
     
@@ -54,7 +56,7 @@ class Game {
         return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue == Pin.ten.rawValue
     }
     
-    private func spareScore(rollIndex: Int)-> Int {
+    private func spareScore(rollIndex: Int)-> Score {
         return rolls[rollIndex].rawValue + rolls[rollIndex+1].rawValue + rolls[rollIndex+2].rawValue
     }
     
@@ -62,7 +64,7 @@ class Game {
         return score == Pin.ten
     }
     
-    private func strikeScore(rollIndex: Int)-> Int {
+    private func strikeScore(rollIndex: Int)-> Score {
         return rolls[rollIndex].rawValue  + rolls[rollIndex + 1].rawValue  + rolls[rollIndex + 2].rawValue
     }
 }

@@ -21,3 +21,5 @@ struct Constant {
         static let screenTitle = "Bowling"
     }
 }
+
+typealias Score = Int
