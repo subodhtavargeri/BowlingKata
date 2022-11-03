@@ -13,7 +13,10 @@ class RollSpy: RollProtocol {
     }
     
     func getRawValue(index: Int)-> Score {
-        return roll[index].rawValue
+        if isValidIndex(rollIndex: index) {
+            return roll[index].rawValue
+        }
+        return .zero
     }
     
     func pinValueAtIndex(index: Int)-> Pin {

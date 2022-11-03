@@ -16,7 +16,11 @@ struct Roll : RollProtocol {
     }
     
     func getRawValue(index: Int)-> Score {
-        return rolls[index].rawValue
+        
+        if isValidIndex(rollIndex: index) {
+            return rolls[index].rawValue
+        }
+        return .zero
     }
     
     mutating func resetRoll() {

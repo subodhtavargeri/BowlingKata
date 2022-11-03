@@ -176,4 +176,12 @@ class GameTests: XCTestCase {
         
         XCTAssertEqual(resetScore, 0)
     }
+    
+    func test_GameScoreIsTen_WhenPlayerStrikesInFirstRole_ThenHasNotFinishedPlayingAllFrames() {
+        rollBalls(knockedPins: .ten, roll: 1)
+        let resetScore = game?.calculateScore()
+        
+        XCTAssertEqual(resetScore, 10)
+    }
+    
 }

@@ -23,7 +23,7 @@ class Game {
         for _ in 1...10 {
             
             if !isValidIndex(rollIndex: rollIndex) {
-                return 0
+                return score
             }
             
             let rollScore = roll.pinValueAtIndex(index: rollIndex)
