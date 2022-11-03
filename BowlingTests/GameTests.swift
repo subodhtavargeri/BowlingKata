@@ -143,6 +143,18 @@ class GameTests: XCTestCase {
         XCTAssertEqual(originalScore, 26)
     }
     
+    func test_GameScoreIsThirty_WhenPlayerScoresTenInFirstRoll_ThenAllOnesInNextRoll_StrikeInMiddle() {
+        rollBalls(knockedPins: .zero, roll: 10)
+        rollBalls(knockedPins: .ten, roll: 1)
+        rollBalls(knockedPins: .one, roll: 1)
+        rollBalls(knockedPins: .two, roll: 1)
+        rollBalls(knockedPins: .zero, roll: 6)
+        
+        let originalScore = game?.calculateScore()
+        
+        XCTAssertEqual(originalScore, 16)
+    }
+    
     func test_GameScoreIsZero_WhenGameIsReset() {
         game?.resetGame()
         
