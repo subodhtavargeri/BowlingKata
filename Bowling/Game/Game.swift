@@ -4,7 +4,7 @@ enum Pin: Int {
 
 protocol GameProtocol {
     func rollBalls(pins: Pin)
-    func calculateScore()
+    func calculateScore() -> Int
 }
 
 class Game {
@@ -21,7 +21,7 @@ class Game {
         rolls.append(pins)
     }
     
-    func calculateScore() {
+    func calculateScore() -> Int {
         var rollIndex = 0
         for _ in 1...10 {
             let rollScore = rolls[rollIndex]
@@ -41,6 +41,7 @@ class Game {
             score += normalScore(rollIndex: rollIndex)
             rollIndex+=2
         }
+        return score
     }
     
     private func normalScore(rollIndex: Int)-> Int {
