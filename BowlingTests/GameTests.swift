@@ -158,11 +158,10 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .zero, roll: 16)
         let originalScore = game?.calculateScore()
         XCTAssertEqual(originalScore, 26)
-        
         game?.resetGame()
         
         let resetScore = game?.calculateScore()
+        
         XCTAssertEqual(resetScore, 0)
-    
     }
 }
