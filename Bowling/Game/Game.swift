@@ -51,7 +51,7 @@ class Game {
     }
     
     private func normalScore(rollIndex: Int)-> Score {
-        return roll.rolls[rollIndex].rawValue + roll.rolls[rollIndex+1].rawValue
+        return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex+1)
     }
     
     private func isSpare(rollIndex: Int)-> Bool {
@@ -67,6 +67,6 @@ class Game {
     }
     
     private func strikeScore(rollIndex: Int)-> Score {
-        return roll.rolls[rollIndex].rawValue  + roll.rolls[rollIndex + 1].rawValue  + roll.rolls[rollIndex + 2].rawValue
+        return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + 1) + roll.getRawValue(index: rollIndex + 2)
     }
 }
