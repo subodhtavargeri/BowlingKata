@@ -7,8 +7,8 @@ class GameTests: XCTestCase {
     
     override func setUp() {
         let pin = [Pin]()
-        let role = Roll(rolls: pin)
-        game = Game(rool: role)
+        let roll = Roll(rolls: pin)
+        game = Game(roll: roll)
     }
     
     func test_GameScoreIsZero_WhenGameBegins() {

@@ -5,14 +5,14 @@ protocol GameProtocol {
 
 class Game {
     
-    private var rolls: Roll
+    private var roll: Roll
     
     func rollBalls(pins: Pin) {
-        rolls.append(pin: pins)
+        roll.append(pin: pins)
     }
     
     init(roll: Roll) {
-        rolls = roll
+        self.roll = roll
     }
     
     func calculateScore() -> Score {
@@ -25,7 +25,7 @@ class Game {
                 return 0
             }
             
-            let rollScore = rolls.rolls[rollIndex]
+            let rollScore = roll.rolls[rollIndex]
             
             if isStrike(score: rollScore) {
                 score += strikeScore(rollIndex: rollIndex)
@@ -47,19 +47,19 @@ class Game {
     }
     
     private func isValidIndex(rollIndex: Int) -> Bool {
-        return rolls.rolls.indices.contains(rollIndex)
+        return roll.rolls.indices.contains(rollIndex)
     }
     
     private func normalScore(rollIndex: Int)-> Score {
-        return rolls.rolls[rollIndex].rawValue + rolls.rolls[rollIndex+1].rawValue
+        return roll.rolls[rollIndex].rawValue + roll.rolls[rollIndex+1].rawValue
     }
     
     private func isSpare(rollIndex: Int)-> Bool {
-        return rolls.getRawValue(index: rollIndex) + rolls.getRawValue(index: rollIndex+1) == Pin.ten.rawValue
+        return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex+1) == Pin.ten.rawValue
     }
     
     private func spareScore(rollIndex: Int)-> Score {
-        return rolls.getRawValue(index: rollIndex) + rolls.getRawValue(index: rollIndex+1) +  rolls.getRawValue(index: rollIndex+2)
+        return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex+1) +  roll.getRawValue(index: rollIndex+2)
     }
     
     private func isStrike(score: Pin)-> Bool {
@@ -67,6 +67,6 @@ class Game {
     }
     
     private func strikeScore(rollIndex: Int)-> Score {
-        return rolls.rolls[rollIndex].rawValue  + rolls.rolls[rollIndex + 1].rawValue  + rolls.rolls[rollIndex + 2].rawValue
+        return roll.rolls[rollIndex].rawValue  + roll.rolls[rollIndex + 1].rawValue  + roll.rolls[rollIndex + 2].rawValue
     }
 }
