@@ -2,6 +2,11 @@ enum Pin: Int {
     case zero = 0, one, two, three, four, five, six, seven, eight, nine, ten
 }
 
+protocol GameProtocol {
+    func rollBalls(pins: Pin)
+    func calculateScore()
+}
+
 class Game {
     
     private (set) var score: Int
