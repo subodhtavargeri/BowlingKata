@@ -55,7 +55,7 @@ class Game {
     }
     
     private func isSpare(rollIndex: Int)-> Bool {
-        return rolls.rolls[rollIndex].rawValue + rolls.rolls[rollIndex+1].rawValue == Pin.ten.rawValue
+        return rolls.getRawValue(index: rollIndex) + rolls.getRawValue(index: rollIndex+1) == Pin.ten.rawValue
     }
     
     private func spareScore(rollIndex: Int)-> Score {
