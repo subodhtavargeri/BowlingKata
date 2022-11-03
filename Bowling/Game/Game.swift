@@ -7,12 +7,12 @@ class Game {
     
     private var roll: RollProtocol
     
-    func rollBalls(pins: Pin) {
-        roll.append(pin: pins)
-    }
-    
     init(roll: RollProtocol) {
         self.roll = roll
+    }
+    
+    func rollBalls(pins: Pin) {
+        roll.append(pin: pins)
     }
     
     func calculateScore() -> Score {
@@ -44,6 +44,10 @@ class Game {
         }
         
         return score
+    }
+    
+    func resetGame() {
+        roll.resetRoll()
     }
     
     private func isValidIndex(rollIndex: Int) -> Bool {

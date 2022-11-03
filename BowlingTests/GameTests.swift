@@ -143,11 +143,26 @@ class GameTests: XCTestCase {
         XCTAssertEqual(originalScore, 26)
     }
     
-    //    func test_RollCountIsZero_WhenGameBegins() {
-    //        let pin = [Pin]()
-    //      //  let role = Roll(rolls: pin)
-    //        let game = Game(roll: role)
-    //
-    //       // XCTAssertEqual(game?.r, <#T##expression2: Equatable##Equatable#>)
-    //    }
+    func test_GameScoreIsZero_WhenGameIsReset() {
+        game?.resetGame()
+        
+        let originalScore = game?.calculateScore()
+        
+        XCTAssertEqual(originalScore, 0)
+    }
+    
+    func test_GameScoreIsZero_WhenPlayerScoresTenInFirstRoll_ThenSevenAndOneInNextTwoRolls_ZeroInNextSixteenRolls_GameIsReset() {
+        rollBalls(knockedPins: .ten, roll: 1)
+        rollBalls(knockedPins: .seven, roll: 1)
+        rollBalls(knockedPins: .one, roll: 1)
+        rollBalls(knockedPins: .zero, roll: 16)
+        let originalScore = game?.calculateScore()
+        XCTAssertEqual(originalScore, 26)
+        
+        game?.resetGame()
+        
+        let resetScore = game?.calculateScore()
+        XCTAssertEqual(resetScore, 0)
+    
+    }
 }
