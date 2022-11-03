@@ -45,4 +45,10 @@ class GamePresenterTests: XCTestCase {
         
         XCTAssertEqual(view.title, "/")
     }
+    
+    func test_GameFinalScoreIsDisplayed_WhenAllFramesAreFinished() {
+        presenter?.getGameFinalScore()
+        
+        XCTAssertEqual(view.score, "20")
+    }
 }

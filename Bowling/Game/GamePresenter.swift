@@ -18,6 +18,7 @@ class GamePresenter {
     }
     
     func getGameFinalScore() {
-        let _ = game.calculateScore()
+        let gameScore = game.calculateScore()
+        view.displayFinalGameScore(score: String(gameScore))
     }
 }
