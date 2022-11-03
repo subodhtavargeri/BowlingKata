@@ -126,11 +126,11 @@
 				5BBAC7C929123EFA008D793A /* AppDelegate.swift */,
 				5BBAC7CB29123EFA008D793A /* SceneDelegate.swift */,
 				5BBAC7CD29123EFA008D793A /* ViewController.swift */,
+				5B490A7E2913C453003FEA73 /* Constant.swift */,
 				5BBAC7CF29123EFA008D793A /* Main.storyboard */,
 				5BBAC7D229123EFC008D793A /* Assets.xcassets */,
 				5BBAC7D429123EFC008D793A /* LaunchScreen.storyboard */,
 				5BBAC7D729123EFC008D793A /* Info.plist */,
-				5B490A7E2913C453003FEA73 /* Constant.swift */,
 			);
 			path = Bowling;
 			sourceTree = "<group>";

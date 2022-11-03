@@ -14,7 +14,6 @@ enum Pin: Int {
     }
 }
 
-
 struct Constant {
     
     struct Title {
