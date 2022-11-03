@@ -83,7 +83,7 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .one, roll: 18)
         
         game?.getscore()
-        
+
         XCTAssertEqual(game?.score, 29)
     }
     
@@ -95,6 +95,7 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .two, roll: 10)
         
         game?.getscore()
+        
         XCTAssertEqual(game?.score, 48)
     }
     
@@ -104,7 +105,7 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .zero, roll: 15)
         
         game?.getscore()
-    
+        
         XCTAssertEqual(game?.score, 27)
     }
     
@@ -112,6 +113,7 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .ten, roll: 12)
         
         game?.getscore()
+        
         XCTAssertEqual(game?.score, 300)
     }
     
@@ -120,6 +122,7 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .one, roll: 18)
         
         game?.getscore()
+        
         XCTAssertEqual(game?.score, 30)
     }
     
