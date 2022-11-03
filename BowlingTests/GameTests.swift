@@ -10,7 +10,9 @@ class GameTests: XCTestCase {
     }
     
     func test_GameScoreIsZero_WhenGameBegins() {
-        XCTAssertEqual(game?.score, 0)
+        let originalScore = game?.calculateScore()
+        
+        XCTAssertEqual(originalScore, 0)
     }
     
     private func rollBalls(knockedPins: Pin, roll: Int) {
@@ -28,7 +30,9 @@ class GameTests: XCTestCase {
     func test_GameScoreIsZero_WhenPlayerScoresZero_InAllTwentyRolls() {
         rollBalls(knockedPins: .zero, roll: 20)
         
-        XCTAssertEqual(game?.score, 0)
+        let originalScore = game?.calculateScore()
+        
+        XCTAssertEqual(originalScore, 0)
     }
     
     func test_GameScoreIsTwenty_WhenPlayerScoresOnePin_InAllTwentyRolls() {
