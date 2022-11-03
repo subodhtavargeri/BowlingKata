@@ -9,7 +9,6 @@ class Game {
     
     func rollBalls(pins: Pin) {
         rolls.append(pin: pins)
-        
     }
     
     init() {
