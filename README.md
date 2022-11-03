@@ -25,5 +25,5 @@ The game score is the total of all frame scores.
 
 ## Run Application
 
-- Open TicTacToe.xcodeproj uing Xcode (preferably 13.4.1).
+- Open Bowling.xcodeproj uing Xcode (preferably 13.4.1).
 - Run application on any Iphone/Ipad simulator.
