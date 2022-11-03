@@ -33,4 +33,10 @@ class GamePresenterTests: XCTestCase {
         
         XCTAssertEqual(view.title, String(2))
     }
+    
+    func test_PinScoreXIsDisplayed_WhenPlayerKnocksTenPin_Strike() {
+        presenter?.playerRolls(knockedPins: 10)
+        
+        XCTAssertEqual(view.title, "X")
+    }
 }
