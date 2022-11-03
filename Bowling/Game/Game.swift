@@ -6,8 +6,6 @@ protocol GameProtocol {
 class Game {
     
     private var rolls = [Pin]()
-    typealias rollIndex = (rollIndex: Int)
-    typealias AppReducer = Reducer<AppState, AppAction, AppEnvironment> 
     
     func rollBalls(pins: Pin) {
         rolls.append(pins)
