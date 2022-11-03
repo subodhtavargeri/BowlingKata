@@ -39,4 +39,10 @@ class GamePresenterTests: XCTestCase {
         
         XCTAssertEqual(view.title, "X")
     }
+    
+    func test_PinScoreSlashIsDisplayed_WhenPlayerKnocksFivePin_Spare() {
+        presenter?.playerRolls(knockedPins: 5)
+        
+        XCTAssertEqual(view.title, "/")
+    }
 }
