@@ -1,6 +1,6 @@
 import UIKit
 
-protocol BowlingViewProtocol {
+protocol BowlingViewProtocol: AnyObject {
     func displayPinRollTitle(title: String)
     func displayFinalGameScore(score: String)
     func displayViewTitle(title: String)

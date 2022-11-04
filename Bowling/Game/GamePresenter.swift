@@ -7,7 +7,7 @@ protocol GamePresenterProtocol {
 class GamePresenter: GamePresenterProtocol {
     
     let game: GameProtocol
-    let view: BowlingViewProtocol
+    weak var view: BowlingViewProtocol?
     
     init(game: GameProtocol, view: BowlingViewProtocol) {
         self.game = game
@@ -20,12 +20,12 @@ class GamePresenter: GamePresenterProtocol {
         }
         
         game.rollBalls(pins: pin)
-        view.displayPinRollTitle(title: pin.pinSymbols())
+        view?.displayPinRollTitle(title: pin.pinSymbols())
     }
     
     func getGameFinalScore() {
         let gameScore = game.calculateScore()
-        view.displayFinalGameScore(score: String(gameScore))
+        view?.displayFinalGameScore(score: String(gameScore))
     }
     
     func loadPresenter() {
@@ -33,6 +33,6 @@ class GamePresenter: GamePresenterProtocol {
     }
     
     private func displayViewTitle() {
-        view.displayViewTitle(title: Constant.Title.screenTitle)
+        view?.displayViewTitle(title: Constant.Title.screenTitle)
     }
 }
