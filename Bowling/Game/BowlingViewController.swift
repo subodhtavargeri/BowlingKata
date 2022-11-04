@@ -10,13 +10,23 @@ class BowlingViewController: UIViewController {
     
     var presenter: GamePresenterProtocol?
     
+    @IBOutlet weak var labelFinalScore: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.loadPresenter()
     }
     
+    @IBAction func pinScoreClicked(_ sender: UIButton) {
+        presenter?.playerRolls(knockedPins: sender.tag)
+    }
+    
     func setupPresenter(presenter: GamePresenterProtocol) {
         self.presenter = presenter
+    }
+    
+    @IBAction func finalScoreButtonClicked(_ sender: Any) {
+        presenter?.getGameFinalScore()
     }
 }
 
@@ -27,7 +37,7 @@ extension BowlingViewController: BowlingViewProtocol {
     }
     
     func displayFinalGameScore(score: String) {
-        
+        labelFinalScore.text = score
     }
     
     func displayViewTitle(title: String) {
