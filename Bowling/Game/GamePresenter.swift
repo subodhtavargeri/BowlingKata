@@ -35,6 +35,7 @@ class GamePresenter: GamePresenterProtocol {
     
     func resetGame() {
         game.resetGame()
+        getGameFinalScore()
     }
     
     private func displayViewTitle() {

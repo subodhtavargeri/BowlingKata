@@ -22,12 +22,14 @@ class BowlingViewController: UIViewController {
     }
     
     @IBAction func pinScoreClicked(_ sender: UIButton) {
-        presenter?.playerRolls(knockedPins: sender.tag)
+        let xx = Int(sender.titleLabel?.text ?? "0") ?? 0
+        presenter?.playerRolls(knockedPins: xx)
     }
     
     @IBAction func finalScoreButtonClicked(_ sender: Any) {
         presenter?.getGameFinalScore()
     }
+    
     @IBAction func buttonResetClicked(_ sender: Any) {
         presenter?.resetGame()
     }

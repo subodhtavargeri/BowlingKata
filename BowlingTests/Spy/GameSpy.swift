@@ -5,7 +5,7 @@ class GameSpy: GameProtocol {
     var pins: Pin?
     
     func calculateScore() -> Int {
-        return 20
+        return (pins != nil) ? 20 : 0
     }
     
     func rollBalls(pins: Pin) {
