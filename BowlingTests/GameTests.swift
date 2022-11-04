@@ -155,6 +155,17 @@ class GameTests: XCTestCase {
         XCTAssertEqual(originalScore, 16)
     }
     
+    func test_GameScoreIsFourteen_WhenPlayerScoresZeroPinsInFirstNineteenRoll_ThenScoresTenPinsInNextRoll_TwoPinsInAdditionalPins_StrikeAtEnd() {
+        rollBalls(knockedPins: .zero, roll: 18)
+        let pinArray = [Pin.ten,Pin.two,Pin.two]
+        loopThroughGameRollBalls(Pins: pinArray)
+        
+        let originalScore = game?.calculateScore()
+        
+        XCTAssertEqual(originalScore, 14)
+        
+    }
+    
     func test_GameScoreIsZero_WhenGameIsReset() {
         game?.resetGame()
         
