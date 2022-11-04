@@ -27,6 +27,9 @@ struct Constant {
         static let incrementCounterToGetNextRollWhenItsAnNormal = 2
     }
     
+    struct Message {
+        static let gameScore = "Final Score: %@"
+    }
 }
 
 typealias Score = Int
