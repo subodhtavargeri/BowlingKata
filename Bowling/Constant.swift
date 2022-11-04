@@ -30,3 +30,4 @@ struct Constant {
 }
 
 typealias Score = Int
+typealias currentRollIndex = Int
