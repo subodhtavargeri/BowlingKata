@@ -178,7 +178,7 @@
                                                             <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="resetButtonClicked:" destination="BYZ-38-t0r" eventType="touchDragInside" id="Uio-vl-F9t"/>
+                                                            <action selector="buttonResetClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tBT-0C-lFh"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

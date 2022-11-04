@@ -28,6 +28,9 @@ class BowlingViewController: UIViewController {
     @IBAction func finalScoreButtonClicked(_ sender: Any) {
         presenter?.getGameFinalScore()
     }
+    @IBAction func buttonResetClicked(_ sender: Any) {
+        presenter?.resetGame()
+    }
 }
 
 extension BowlingViewController: BowlingViewProtocol {
