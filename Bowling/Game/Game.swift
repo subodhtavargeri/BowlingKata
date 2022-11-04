@@ -1,6 +1,6 @@
 protocol GameProtocol {
     func rollBalls(pins: Pin)
-    func calculateScore()-> Int
+    func calculateScore(scoreCalculationCompletion: finishedCalculatingGameScore)
     func resetGame()
 }
 
@@ -11,7 +11,7 @@ class Game: GameProtocol {
     private var firstRollForNextFrameWhenItsAnStrike = 1
     private var secondRollForNextFrame = 2
     private var firstRollForNextFrameWhenItsAnSpare = 2
-    
+     
     init(roll: RollProtocol) {
         self.roll = roll
     }
@@ -20,14 +20,15 @@ class Game: GameProtocol {
         roll.append(pin: pins)
     }
     
-    func calculateScore()-> Score {
+    func calculateScore(scoreCalculationCompletion: finishedCalculatingGameScore) {
         var rollIndex = 0
         var score = 0
         
         for _ in 1...Constant.GameRules.maximumFrames {
             
             if !isValidIndex(rollIndex: rollIndex) {
-                return score
+                scoreCalculationCompletion(score)
+                return
             }
             
             let rollScore = roll.pinValueAtIndex(index: rollIndex)
@@ -48,7 +49,7 @@ class Game: GameProtocol {
             rollIndex += Constant.GameRules.incrementCounterToGetNextRollWhenItsAnNormal
         }
         
-        return score
+        scoreCalculationCompletion(score)
     }
     
     func resetGame() {

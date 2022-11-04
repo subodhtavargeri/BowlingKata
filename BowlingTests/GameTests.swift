@@ -11,9 +11,9 @@ class GameTests: XCTestCase {
     }
     
     func test_GameScoreIsZero_WhenGameBegins() {
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 0)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 0)
+        })
     }
     
     private func rollBalls(knockedPins: Pin, roll: Int) {
@@ -31,17 +31,17 @@ class GameTests: XCTestCase {
     func test_GameScoreIsZero_WhenPlayerScoresZero_InAllTwentyRolls() {
         rollBalls(knockedPins: .zero, roll: 20)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 0)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 0)
+        })
     }
     
     func test_GameScoreIsTwenty_WhenPlayerScoresOnePin_InAllTwentyRolls() {
         rollBalls(knockedPins: .one, roll: 20)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 20)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 20)
+        })
     }
     
     func test_GameScoreIsTwelve_WhenPlayerScoresZeroInSixteenRolls_ThenFourPinsThenOnePinThenFivePinsThenTwoPins_InLastFourRolls() {
@@ -49,9 +49,9 @@ class GameTests: XCTestCase {
         let pinArray = [Pin.four,Pin.one,Pin.five,Pin.two]
         loopThroughGameRollBalls(Pins: pinArray)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 12)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 12)
+        })
     }
     
     func test_GameScoreIsSixteen_WhenPlayerScoresFivePinsThenFivePinsThenThreePins_ZeroInNextSeventeenRolls_SpareConditionInBeginning() {
@@ -60,17 +60,17 @@ class GameTests: XCTestCase {
         loopThroughGameRollBalls(Pins: pinArray)
         rollBalls(knockedPins: .zero, roll: 17)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 16)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 16)
+        })
     }
     
     func test_GameScoreIsOneHundredAndFifty_WhenPlayerScoresFivePinsInAllTwentyOneRolls_SpareConditionThroughtOutRolls() {
         rollBalls(knockedPins: .five, roll: 21)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 150)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 150)
+        })
     }
     
     func test_GameScoreIsThirtyThree_WhenPlayerScoresOnePinInFirstEighteenRolls_FiveInNextThreeRolls_GetsOneAdditionRoll_SpareConditionAtEnd() {
@@ -78,9 +78,9 @@ class GameTests: XCTestCase {
         let pinArray = [Pin.five,Pin.five,Pin.five]
         loopThroughGameRollBalls(Pins: pinArray)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 33)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 33)
+        })
     }
     
     func test_GameScoreIsTwentyNine_WhenPlayerScoresFivePinsThenFivePins_OneInLastEighteenRolls_SpareConditionInBeginning() {
@@ -88,9 +88,9 @@ class GameTests: XCTestCase {
         loopThroughGameRollBalls(Pins: pinArray)
         rollBalls(knockedPins: .one, roll: 18)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 29)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 29)
+        })
     }
     
     func test_GameScoreIsFourtyEight_WhenPlayerScoresThreePinsInFirstFourRolls_ThenOnePinInNextFourRolls_ThenFivePinsInNextTwoRolls_TwoPinsInLastTenRolls_SpareConditionInMiddle() {
@@ -100,9 +100,9 @@ class GameTests: XCTestCase {
         loopThroughGameRollBalls(Pins: pinArray)
         rollBalls(knockedPins: .two, roll: 10)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 48)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 48)
+        })
     }
     
     func test_GameScoreIsTwentySeven_WhenPlayerScoresFivePinsThenFivePinsThenFivePinsThenFivePinsThenOnePins_ZeroInLastFifteenRolls_TwoSpareCondition() {
@@ -110,26 +110,26 @@ class GameTests: XCTestCase {
         loopThroughGameRollBalls(Pins: pinArray)
         rollBalls(knockedPins: .zero, roll: 15)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 27)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 27)
+        })
     }
     
     func test_GameScoreIsThreeHundred_WhenPlayerScoresTenPinsInAllTwelveRolls_GetsTwoAdditionalRolls_StrikeThroughtOut() {
         rollBalls(knockedPins: .ten, roll: 12)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 300)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore,300)
+        })
     }
     
     func test_GameScoreIsThirty_WhenPlayerScoresTenPinsInFirstRoll_ThenAllOnesInNextRoll_StrikeInBeginning() {
         rollBalls(knockedPins: .ten, roll: 1)
         rollBalls(knockedPins: .one, roll: 18)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 30)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 30)
+        })
     }
     
     func test_GameScoreIsTwentySix_WhenPlayerScoresTenPinsInFirstRoll_ThenSevenAndOneInNextTwoRolls_ZeroInNextSixteenRolls_StrikeInBeginning() {
@@ -138,9 +138,9 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .one, roll: 1)
         rollBalls(knockedPins: .zero, roll: 16)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 26)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 26)
+        })
     }
     
     func test_GameScoreIsThirty_WhenPlayerScoresTenPinsInFirstRoll_ThenAllOnesInNextRoll_StrikeInMiddle() {
@@ -150,9 +150,9 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .two, roll: 1)
         rollBalls(knockedPins: .zero, roll: 6)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 16)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 16)
+        })
     }
     
     func test_GameScoreIsFourteen_WhenPlayerScoresZeroPinsInFirstNineteenRoll_ThenScoresTenPinsInNextRoll_TwoPinsInAdditionalPins_StrikeAtEnd() {
@@ -160,18 +160,17 @@ class GameTests: XCTestCase {
         let pinArray = [Pin.ten,Pin.two,Pin.two]
         loopThroughGameRollBalls(Pins: pinArray)
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 14)
-        
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 14)
+        })
     }
     
     func test_GameScoreIsZero_WhenGameIsReset() {
         game?.resetGame()
         
-        let originalScore = game?.calculateScore()
-        
-        XCTAssertEqual(originalScore, 0)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 0)
+        })
     }
     
     func test_GameScoreIsZero_WhenPlayerScoresTenPinsInFirstRoll_ThenSevenPinsAndOnePinInNextTwoRolls_ZeroInNextSixteenRolls_GameIsReset() {
@@ -179,28 +178,31 @@ class GameTests: XCTestCase {
         rollBalls(knockedPins: .seven, roll: 1)
         rollBalls(knockedPins: .one, roll: 1)
         rollBalls(knockedPins: .zero, roll: 16)
-        let originalScore = game?.calculateScore()
-        XCTAssertEqual(originalScore, 26)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 26)
+        })
         game?.resetGame()
         
-        let resetScore = game?.calculateScore()
-        
-        XCTAssertEqual(resetScore, 0)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 0)
+        })
     }
     
     func test_GameScoreIsTen_WhenPlayerStrikesInFirstRole_ThenHasNotFinishedPlayingAllFrames() {
         rollBalls(knockedPins: .ten, roll: 1)
-        let resetScore = game?.calculateScore()
         
-        XCTAssertEqual(resetScore, 10)
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 10)
+        })
     }
     
     func test_GameScoreIsThree_WhenPlayerScoresOnePinInFirstRoll_TwoPinsInSecondRoll_ThenHasNotFinishedPlayingAllFrames() {
         rollBalls(knockedPins: .one, roll: 1)
         rollBalls(knockedPins: .two, roll: 1)
-        let resetScore = game?.calculateScore()
-        
-        XCTAssertEqual(resetScore, 3)
+       
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 3)
+        })
     }
     
 }

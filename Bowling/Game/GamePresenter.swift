@@ -25,9 +25,10 @@ class GamePresenter: GamePresenterProtocol {
     }
     
     func getGameFinalScore() {
-        let gameScore = game.calculateScore()
-        let message = String(format: Constant.Message.gameScore, arguments: [String(gameScore)])
-        view?.displayFinalGameScore(score: message)
+        game.calculateScore { score in
+            let message = String(format: Constant.Message.gameScore, arguments: [String(score)])
+            view?.displayFinalGameScore(score: message)
+        }
     }
     
     func loadPresenter() {

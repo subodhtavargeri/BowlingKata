@@ -2,10 +2,11 @@
 
 class GameSpy: GameProtocol {
     
+    var score = 0
     var pins: Pin?
     
-    func calculateScore() -> Int {
-        return (pins != nil) ? 20 : 0
+    func calculateScore(scoreCalculationCompletion: (Int) -> Void) {
+        score = (pins != nil) ? 20 : 0
     }
     
     func rollBalls(pins: Pin) {
@@ -15,5 +16,5 @@ class GameSpy: GameProtocol {
     func resetGame() {
         self.pins = nil
     }
-
+    
 }

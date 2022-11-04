@@ -27,7 +27,10 @@ class GamePresenterTests: XCTestCase {
         
         presenter?.getGameFinalScore()
         
-        XCTAssertEqual(game.calculateScore(), 20)
+        game.calculateScore { score in
+            XCTAssertEqual(score, 20)
+        }
+        
     }
     
     func test_PinScoreIsDisplayed_WhenPlayerKnocksTwoPin() {
@@ -48,12 +51,14 @@ class GamePresenterTests: XCTestCase {
         XCTAssertEqual(view.title, "/")
     }
     
-    func test_GameFinalScoreIsDisplayed_WhenAllFramesAreFinished() {
+    func test_GameFinalScoreTwentyIsDisplayed_WhenAllFramesAreFinished() {
         presenter?.playerRolls(knockedPins: 2)
         
         presenter?.getGameFinalScore()
         
-        XCTAssertEqual(view.score, "20")
+        game.calculateScore { score in
+            XCTAssertEqual(view.score, "20")
+        }
     }
     
     func test_DisplayViewTitle_WhenPresenterLoads() {
