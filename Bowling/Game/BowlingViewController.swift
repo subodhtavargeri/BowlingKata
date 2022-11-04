@@ -10,7 +10,10 @@ class BowlingViewController: UIViewController {
     
     var presenter: GamePresenterProtocol?
     
+    var currentLabel = 1
     @IBOutlet weak var labelFinalScore: UILabel!
+    
+    @IBOutlet var labelPinScore: [UILabel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +25,8 @@ class BowlingViewController: UIViewController {
     }
     
     @IBAction func pinScoreClicked(_ sender: UIButton) {
-        let xx = Int(sender.titleLabel?.text ?? "0") ?? 0
-        presenter?.playerRolls(knockedPins: xx)
+        let score = Int(sender.titleLabel?.text ?? "0") ?? 0
+        presenter?.playerRolls(knockedPins: score)
     }
     
     @IBAction func finalScoreButtonClicked(_ sender: Any) {
@@ -38,7 +41,12 @@ class BowlingViewController: UIViewController {
 extension BowlingViewController: BowlingViewProtocol {
     
     func displayPinRollTitle(title: String) {
+        guard let rollScoreLabel = labelPinScore.filter({$0.tag == currentLabel}).first else {
+            return
+        }
         
+        rollScoreLabel.text = title
+        currentLabel += 1
     }
     
     func displayFinalGameScore(score: String) {
