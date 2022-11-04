@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2l-HL-w1j">
-                                <rect key="frame" x="0.0" y="76" width="414" height="20.5"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -223,7 +223,7 @@
                             <constraint firstItem="p2l-HL-w1j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PyD-dj-F8f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lB1-qk-bV2" secondAttribute="bottom" constant="16" id="ZgX-RW-PIF"/>
                             <constraint firstItem="mlg-AC-Zn3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hjq-PQ-dGD"/>
-                            <constraint firstItem="p2l-HL-w1j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="kuY-Q7-zK1"/>
+                            <constraint firstItem="p2l-HL-w1j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="kuY-Q7-zK1"/>
                         </constraints>
                     </view>
                     <connections>
