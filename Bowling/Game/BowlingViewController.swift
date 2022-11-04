@@ -26,7 +26,7 @@ class BowlingViewController: UIViewController {
     
     @IBAction func pinScoreClicked(_ sender: UIButton) {
         let score = Int(sender.titleLabel?.text ?? "0") ?? 0
-        presenter?.playerRolls(knockedPins: score)
+        presenter?.playerRolls(totalNumberOfPinKnocked: score)
     }
     
     @IBAction func finalScoreButtonClicked(_ sender: Any) {

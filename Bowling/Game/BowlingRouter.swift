@@ -1,7 +1,7 @@
 import UIKit
 
 protocol RouterProtocol {
-    func routeBowlingController()
+    func routeToBowlingController()
 }
 
 class BowlingRouter: RouterProtocol {
@@ -12,7 +12,7 @@ class BowlingRouter: RouterProtocol {
         self.navigationController = navigationController
     }
     
-    func routeBowlingController() {
+    func routeToBowlingController() {
         let view = BowlingFactory.create(router: self)
         navigationController.setViewControllers([view], animated: true)
     }

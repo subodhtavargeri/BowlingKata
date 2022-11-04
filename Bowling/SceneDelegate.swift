@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.rootViewController = navigationController
         
         let router = BowlingRouter.init(navigationController: navigationController)
-        router.routeBowlingController()
+        router.routeToBowlingController()
         window?.makeKeyAndVisible()
     }
 

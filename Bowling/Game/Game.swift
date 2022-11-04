@@ -11,7 +11,7 @@ class Game: GameProtocol {
     private var firstRollForNextFrameWhenItsAnStrike = 1
     private var secondRollForNextFrame = 2
     private var firstRollForNextFrameWhenItsAnSpare = 2
-     
+    
     init(roll: RollProtocol) {
         self.roll = roll
     }
@@ -34,13 +34,13 @@ class Game: GameProtocol {
             let rollScore = roll.pinValueAtIndex(index: rollIndex)
             
             if isStrike(score: rollScore) {
-                score += strikeScore(rollIndex: rollIndex)
+                score += strikeBonusScore(rollIndex: rollIndex)
                 rollIndex += Constant.GameRules.incrementCounterToGetNextRollWhenItsAnStrike
                 continue
             }
             
             if isSpare(rollIndex: rollIndex) {
-                score += spareScore(rollIndex: rollIndex)
+                score += spareBonusScore(rollIndex: rollIndex)
                 rollIndex += Constant.GameRules.incrementCounterToGetNextRollWhenItsAnSpare
                 continue
             }
@@ -68,7 +68,7 @@ class Game: GameProtocol {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + secondRollForSameFrame) == Pin.ten.rawValue
     }
     
-    private func spareScore(rollIndex: currentRollIndex)-> Score {
+    private func spareBonusScore(rollIndex: currentRollIndex)-> Score {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + secondRollForSameFrame) +  roll.getRawValue(index: rollIndex + firstRollForNextFrameWhenItsAnSpare)
     }
     
@@ -76,7 +76,7 @@ class Game: GameProtocol {
         return score == Pin.ten
     }
     
-    private func strikeScore(rollIndex: currentRollIndex)-> Score {
+    private func strikeBonusScore(rollIndex: currentRollIndex)-> Score {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + firstRollForNextFrameWhenItsAnStrike) + roll.getRawValue(index: rollIndex + secondRollForNextFrame)
     }
     
