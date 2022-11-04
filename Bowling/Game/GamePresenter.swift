@@ -1,4 +1,10 @@
-class GamePresenter {
+protocol GamePresenterProtocol {
+    func playerRolls(knockedPins: Int)
+    func getGameFinalScore()
+    func loadPresenter()
+}
+
+class GamePresenter: GamePresenterProtocol {
     
     let game: GameProtocol
     let view: BowlingViewProtocol

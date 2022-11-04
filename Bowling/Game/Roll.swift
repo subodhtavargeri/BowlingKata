@@ -9,7 +9,7 @@ protocol RollProtocol {
 
 struct Roll : RollProtocol {
     
-    private var rolls: [Pin]
+    private var rolls = [Pin]()
     
     mutating func append(pin: Pin) {
         rolls.append(pin)

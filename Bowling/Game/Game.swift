@@ -4,7 +4,7 @@ protocol GameProtocol {
     func resetGame()
 }
 
-class Game {
+class Game: GameProtocol {
     
     private var roll: RollProtocol
     private var secondRollForSameFrame = 1

@@ -8,7 +8,29 @@ protocol BowlingViewProtocol {
 
 class BowlingViewController: UIViewController {
     
+    var presenter: GamePresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func setupPresenter(presenter: GamePresenterProtocol) {
+        self.presenter = presenter
+    }
+}
+
+extension BowlingViewController: BowlingViewProtocol {
+    
+    func displayPinRollTitle(title: String) {
+        
+    }
+    
+    func displayFinalGameScore(score: String) {
+        
+    }
+    
+    func displayViewTitle(title: String) {
+        
+    }
+    
 }
