@@ -2,6 +2,7 @@ protocol GamePresenterProtocol {
     func playerRolls(knockedPins: Int)
     func getGameFinalScore()
     func loadPresenter()
+    func resetGame()
 }
 
 class GamePresenter: GamePresenterProtocol {
@@ -30,6 +31,10 @@ class GamePresenter: GamePresenterProtocol {
     
     func loadPresenter() {
         displayViewTitle()
+    }
+    
+    func resetGame() {
+        game.resetGame()
     }
     
     private func displayViewTitle() {

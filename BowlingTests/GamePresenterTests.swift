@@ -57,4 +57,10 @@ class GamePresenterTests: XCTestCase {
         
         XCTAssertEqual(view.title, Constant.Title.screenTitle)
     }
+    
+    func test_ResetProtocolCalled_WhenUserClicksResetButtonFromView() {
+        presenter?.resetGame()
+        
+        XCTAssertNil(game.pins)
+    }
 }
