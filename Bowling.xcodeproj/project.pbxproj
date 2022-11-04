@@ -132,7 +132,6 @@
 				5BBAC7CB29123EFA008D793A /* SceneDelegate.swift */,
 				5BBAC7CD29123EFA008D793A /* ViewController.swift */,
 				5B490A7E2913C453003FEA73 /* Constant.swift */,
-				5BBAC7CF29123EFA008D793A /* Main.storyboard */,
 				5BBAC7D229123EFC008D793A /* Assets.xcassets */,
 				5BBAC7D429123EFC008D793A /* LaunchScreen.storyboard */,
 				5BBAC7D729123EFC008D793A /* Info.plist */,
@@ -162,10 +161,11 @@
 		5BBAC7FB29124434008D793A /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				5B490A842913ED12003FEA73 /* Roll.swift */,
 				5BBAC7FC29124466008D793A /* Game.swift */,
 				5B490A792913A86F003FEA73 /* GamePresenter.swift */,
 				5B490A822913D34B003FEA73 /* BowlingViewController.swift */,
-				5B490A842913ED12003FEA73 /* Roll.swift */,
+				5BBAC7CF29123EFA008D793A /* Main.storyboard */,
 			);
 			path = Game;
 			sourceTree = "<group>";
