@@ -19,6 +19,14 @@ struct Constant {
     struct Title {
         static let screenTitle = "Bowling"
     }
+    
+    struct GameRules {
+        static let maximumFrames = 10
+        static let incrementCounterToGetNextRollWhenItsAnSpare = 2
+        static let incrementCounterToGetNextRollWhenItsAnStrike = 1
+        static let incrementCounterToGetNextRollWhenItsAnNormal = 2
+    }
+    
 }
 
 typealias Score = Int

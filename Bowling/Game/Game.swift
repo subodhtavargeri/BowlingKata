@@ -24,7 +24,7 @@ class Game {
         var rollIndex = 0
         var score = 0
         
-        for _ in 1...10 {
+        for _ in 1...Constant.GameRules.maximumFrames {
             
             if !isValidIndex(rollIndex: rollIndex) {
                 return score
@@ -34,18 +34,18 @@ class Game {
             
             if isStrike(score: rollScore) {
                 score += strikeScore(rollIndex: rollIndex)
-                rollIndex+=1
+                rollIndex += Constant.GameRules.incrementCounterToGetNextRollWhenItsAnStrike
                 continue
             }
             
             if isSpare(rollIndex: rollIndex) {
                 score += spareScore(rollIndex: rollIndex)
-                rollIndex+=2
+                rollIndex += Constant.GameRules.incrementCounterToGetNextRollWhenItsAnSpare
                 continue
             }
             
             score += normalScore(rollIndex: rollIndex)
-            rollIndex+=2
+            rollIndex += Constant.GameRules.incrementCounterToGetNextRollWhenItsAnNormal
         }
         
         return score
