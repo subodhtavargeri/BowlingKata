@@ -8,12 +8,11 @@ protocol BowlingViewProtocol: AnyObject {
 
 class BowlingViewController: UIViewController {
     
-    var presenter: GamePresenterProtocol?
-    
-    var currentLabel = 1
     @IBOutlet weak var labelFinalScore: UILabel!
-    
     @IBOutlet var labelPinScore: [UILabel]!
+    
+    var presenter: GamePresenterProtocol?
+    var currentLabel = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
