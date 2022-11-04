@@ -17,12 +17,12 @@ class BowlingViewController: UIViewController {
         presenter?.loadPresenter()
     }
     
-    @IBAction func pinScoreClicked(_ sender: UIButton) {
-        presenter?.playerRolls(knockedPins: sender.tag)
-    }
-    
     func setupPresenter(presenter: GamePresenterProtocol) {
         self.presenter = presenter
+    }
+    
+    @IBAction func pinScoreClicked(_ sender: UIButton) {
+        presenter?.playerRolls(knockedPins: sender.tag)
     }
     
     @IBAction func finalScoreButtonClicked(_ sender: Any) {
