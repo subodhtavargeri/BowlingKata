@@ -31,101 +31,168 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cWo-0J-1UQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="63"/>
                                                 <subviews>
-                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYI-3u-cE1" userLabel="Frame1" customClass="UILabel">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIC-ew-z5Y">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJl-te-9R7" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UG3-e3-Dm7">
                                                         <rect key="frame" x="32" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwu-lR-4qA" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dr-8n-m3g">
                                                         <rect key="frame" x="64" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFE-GC-Ezs" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zf-cN-cJA">
                                                         <rect key="frame" x="96" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erU-GD-3Ee" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-qB-Zta">
                                                         <rect key="frame" x="128" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="11" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaA-xe-UDn" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-QU-MwW">
                                                         <rect key="frame" x="160" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="13" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jn-Y3-EsL" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2td-Ap-b6c">
                                                         <rect key="frame" x="192" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="15" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBZ-8E-pck" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="15" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5v4-bs-IqA">
                                                         <rect key="frame" x="224" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="17" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpS-yt-bMf" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="17" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hje-lK-PnE">
                                                         <rect key="frame" x="256" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="19" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxc-YR-Mwq" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="19" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGQ-fD-YbJ">
                                                         <rect key="frame" x="288" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="21" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hm-cw-RGf" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="21" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jj-Fq-Mru">
                                                         <rect key="frame" x="320" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-Yn-tKu">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wfo-XT-dfy">
                                                 <rect key="frame" x="0.0" y="65" width="350" height="63"/>
                                                 <subviews>
-                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNV-7f-NWC" userLabel="Frame1" customClass="UILabel">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cap-Yk-3Py">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bje-xk-9v7" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lw8-wy-8mt">
                                                         <rect key="frame" x="32" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H98-0V-hWF" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93x-6g-z5I">
                                                         <rect key="frame" x="64" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lok-nw-WvF" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ2-OT-Pzu">
                                                         <rect key="frame" x="96" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pW-2S-R7f" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLZ-Tj-yWz">
                                                         <rect key="frame" x="128" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQa-d3-XvW" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-2g-FdE">
                                                         <rect key="frame" x="160" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="14" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3XJ-op-Emj" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="14" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sr-2z-gb6">
                                                         <rect key="frame" x="192" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="16" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJh-yX-jdr" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="16" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQO-zd-0oP">
                                                         <rect key="frame" x="224" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="18" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbv-aD-vEC" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="18" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFx-Gh-ScN">
                                                         <rect key="frame" x="256" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="20" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jej-9z-erG" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNp-Rx-Hhm">
                                                         <rect key="frame" x="288" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view tag="22" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vuu-kr-OrS" userLabel="Frame1" customClass="UILabel">
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="22" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzT-RT-IfV">
                                                         <rect key="frame" x="320" y="0.0" width="30" height="63"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -351,28 +418,28 @@
                     </view>
                     <connections>
                         <outlet property="labelFinalScore" destination="p2l-HL-w1j" id="wTi-tx-IZQ"/>
-                        <outletCollection property="labelPinScore" destination="NYI-3u-cE1" collectionClass="NSMutableArray" id="M24-Fq-9Xh"/>
-                        <outletCollection property="labelPinScore" destination="tJl-te-9R7" collectionClass="NSMutableArray" id="hqH-sI-cYl"/>
-                        <outletCollection property="labelPinScore" destination="Fwu-lR-4qA" collectionClass="NSMutableArray" id="MyX-3i-hzO"/>
-                        <outletCollection property="labelPinScore" destination="yFE-GC-Ezs" collectionClass="NSMutableArray" id="t9M-6P-g1O"/>
-                        <outletCollection property="labelPinScore" destination="erU-GD-3Ee" collectionClass="NSMutableArray" id="lQc-dD-utc"/>
-                        <outletCollection property="labelPinScore" destination="UaA-xe-UDn" collectionClass="NSMutableArray" id="Ckj-J2-QcZ"/>
-                        <outletCollection property="labelPinScore" destination="WpS-yt-bMf" collectionClass="NSMutableArray" id="vTz-b3-cYn"/>
-                        <outletCollection property="labelPinScore" destination="rxc-YR-Mwq" collectionClass="NSMutableArray" id="d7C-UD-ClX"/>
-                        <outletCollection property="labelPinScore" destination="2hm-cw-RGf" collectionClass="NSMutableArray" id="tDD-Ke-5Uk"/>
-                        <outletCollection property="labelPinScore" destination="lNV-7f-NWC" collectionClass="NSMutableArray" id="IPn-5T-sGZ"/>
-                        <outletCollection property="labelPinScore" destination="bje-xk-9v7" collectionClass="NSMutableArray" id="9ap-r7-FTR"/>
-                        <outletCollection property="labelPinScore" destination="H98-0V-hWF" collectionClass="NSMutableArray" id="ZTZ-dD-I1A"/>
-                        <outletCollection property="labelPinScore" destination="Lok-nw-WvF" collectionClass="NSMutableArray" id="F6J-WT-M25"/>
-                        <outletCollection property="labelPinScore" destination="7pW-2S-R7f" collectionClass="NSMutableArray" id="UYP-pi-fKO"/>
-                        <outletCollection property="labelPinScore" destination="jQa-d3-XvW" collectionClass="NSMutableArray" id="aIp-SF-9bZ"/>
-                        <outletCollection property="labelPinScore" destination="3XJ-op-Emj" collectionClass="NSMutableArray" id="03P-DM-1Yy"/>
-                        <outletCollection property="labelPinScore" destination="KJh-yX-jdr" collectionClass="NSMutableArray" id="UIM-rn-gyP"/>
-                        <outletCollection property="labelPinScore" destination="Xbv-aD-vEC" collectionClass="NSMutableArray" id="bX6-Nk-MJh"/>
-                        <outletCollection property="labelPinScore" destination="jej-9z-erG" collectionClass="NSMutableArray" id="t9Q-f5-HR7"/>
-                        <outletCollection property="labelPinScore" destination="Vuu-kr-OrS" collectionClass="NSMutableArray" id="ukh-9H-ON6"/>
-                        <outletCollection property="labelPinScore" destination="OBZ-8E-pck" collectionClass="NSMutableArray" id="9XO-OZ-tT2"/>
-                        <outletCollection property="labelPinScore" destination="7Jn-Y3-EsL" collectionClass="NSMutableArray" id="vrU-Rn-U6O"/>
+                        <outletCollection property="labelPinScore" destination="JIC-ew-z5Y" collectionClass="NSMutableArray" id="VQQ-oS-q40"/>
+                        <outletCollection property="labelPinScore" destination="UG3-e3-Dm7" collectionClass="NSMutableArray" id="S2V-6C-iEl"/>
+                        <outletCollection property="labelPinScore" destination="0Dr-8n-m3g" collectionClass="NSMutableArray" id="NKm-Tg-TNQ"/>
+                        <outletCollection property="labelPinScore" destination="7zf-cN-cJA" collectionClass="NSMutableArray" id="hCL-JJ-1Wn"/>
+                        <outletCollection property="labelPinScore" destination="ksg-qB-Zta" collectionClass="NSMutableArray" id="d3E-Z1-LDg"/>
+                        <outletCollection property="labelPinScore" destination="QOc-QU-MwW" collectionClass="NSMutableArray" id="PWn-S7-kfz"/>
+                        <outletCollection property="labelPinScore" destination="2td-Ap-b6c" collectionClass="NSMutableArray" id="YWN-OL-aEA"/>
+                        <outletCollection property="labelPinScore" destination="5v4-bs-IqA" collectionClass="NSMutableArray" id="dUt-Op-VYL"/>
+                        <outletCollection property="labelPinScore" destination="hje-lK-PnE" collectionClass="NSMutableArray" id="z0C-fU-tDK"/>
+                        <outletCollection property="labelPinScore" destination="zGQ-fD-YbJ" collectionClass="NSMutableArray" id="Ki2-sn-49V"/>
+                        <outletCollection property="labelPinScore" destination="8jj-Fq-Mru" collectionClass="NSMutableArray" id="7DP-qY-qDT"/>
+                        <outletCollection property="labelPinScore" destination="Cap-Yk-3Py" collectionClass="NSMutableArray" id="0RG-LX-XKw"/>
+                        <outletCollection property="labelPinScore" destination="lw8-wy-8mt" collectionClass="NSMutableArray" id="qqd-KQ-DlR"/>
+                        <outletCollection property="labelPinScore" destination="93x-6g-z5I" collectionClass="NSMutableArray" id="nS9-uF-pv6"/>
+                        <outletCollection property="labelPinScore" destination="AZ2-OT-Pzu" collectionClass="NSMutableArray" id="LWl-ri-zgF"/>
+                        <outletCollection property="labelPinScore" destination="DLZ-Tj-yWz" collectionClass="NSMutableArray" id="5Ca-Sq-D5w"/>
+                        <outletCollection property="labelPinScore" destination="a8g-2g-FdE" collectionClass="NSMutableArray" id="ujd-5C-6cD"/>
+                        <outletCollection property="labelPinScore" destination="0sr-2z-gb6" collectionClass="NSMutableArray" id="sLp-dU-Gg9"/>
+                        <outletCollection property="labelPinScore" destination="OQO-zd-0oP" collectionClass="NSMutableArray" id="g0N-Np-roT"/>
+                        <outletCollection property="labelPinScore" destination="RFx-Gh-ScN" collectionClass="NSMutableArray" id="50B-o9-MF6"/>
+                        <outletCollection property="labelPinScore" destination="aNp-Rx-Hhm" collectionClass="NSMutableArray" id="TTj-ek-oS3"/>
+                        <outletCollection property="labelPinScore" destination="QzT-RT-IfV" collectionClass="NSMutableArray" id="JLm-xN-hVK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
