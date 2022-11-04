@@ -4,6 +4,7 @@ protocol BowlingViewProtocol: AnyObject {
     func displayPinRollTitle(title: String)
     func displayFinalGameScore(score: String)
     func displayViewTitle(title: String)
+    func resetScoreLabel()
 }
 
 class BowlingViewController: UIViewController {
@@ -12,7 +13,7 @@ class BowlingViewController: UIViewController {
     @IBOutlet var labelPinScore: [UILabel]!
     
     var presenter: GamePresenterProtocol?
-    var currentLabel = 1
+    private var currentLabel = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class BowlingViewController: UIViewController {
     @IBAction func buttonResetClicked(_ sender: Any) {
         presenter?.resetGame()
     }
+    
 }
 
 extension BowlingViewController: BowlingViewProtocol {
@@ -56,4 +58,10 @@ extension BowlingViewController: BowlingViewProtocol {
         self.title = title
     }
     
+    func resetScoreLabel() {
+        labelPinScore.forEach {
+            $0.text = ""
+        }
+        currentLabel = 1
+    }
 }

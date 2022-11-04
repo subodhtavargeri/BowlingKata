@@ -71,6 +71,6 @@ class GamePresenterTests: XCTestCase {
     func test_ScoreZeroIsDisplayedOnView_WhenResetButtonIsClickedFromView() {
         presenter?.resetGame()
         
-        XCTAssertEqual(view.score, "0")
+        XCTAssertEqual(view.score, "")
     }
 }

@@ -1,7 +1,7 @@
 @testable import Bowling
 
 class BowlingViewControllerSpy: BowlingViewProtocol {
-    
+      
     var title: String?
     var score: String?
     
@@ -17,5 +17,8 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
         self.title = title
     }
     
+    func resetScoreLabel() {
+        self.score = ""
+    }
 }
 
