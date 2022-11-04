@@ -12,6 +12,7 @@ class BowlingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.loadPresenter()
     }
     
     func setupPresenter(presenter: GamePresenterProtocol) {
@@ -30,7 +31,7 @@ extension BowlingViewController: BowlingViewProtocol {
     }
     
     func displayViewTitle(title: String) {
-        
+        self.title = title
     }
     
 }
