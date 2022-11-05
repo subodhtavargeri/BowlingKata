@@ -1,9 +1,9 @@
 import UIKit
 
 protocol BowlingViewProtocol: AnyObject {
-    func displayPinRollTitle(title: String)
+    func displayPinRollTitle(title: Title)
     func displayFinalGameScore(score: String)
-    func displayViewTitle(title: String)
+    func displayViewTitle(title: Title)
     func resetScoreLabel()
     func incrementLabel(value: Int)
 }
@@ -42,7 +42,7 @@ class BowlingViewController: UIViewController {
 
 extension BowlingViewController: BowlingViewProtocol {
     
-    func displayPinRollTitle(title: String) {
+    func displayPinRollTitle(title: Title) {
         guard let rollScoreLabel = labelPinScore.filter({$0.tag == currentLabel}).first else {
             return
         }
@@ -53,7 +53,7 @@ extension BowlingViewController: BowlingViewProtocol {
         labelFinalScore.text = score
     }
     
-    func displayViewTitle(title: String) {
+    func displayViewTitle(title: Title) {
         self.title = title
     }
     

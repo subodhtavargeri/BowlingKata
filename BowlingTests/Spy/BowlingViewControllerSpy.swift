@@ -6,7 +6,7 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
     var score: String?
     var counter = 0
     
-    func displayPinRollTitle(title: String) {
+    func displayPinRollTitle(title: Title) {
         self.title = title
     }
     
@@ -14,7 +14,7 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
         self.score = score
     }
     
-    func displayViewTitle(title: String) {
+    func displayViewTitle(title: Title) {
         self.title = title
     }
     

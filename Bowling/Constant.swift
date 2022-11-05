@@ -35,4 +35,4 @@ struct Constant {
 typealias Score = Int
 typealias FinishedCalculatingGameScore = (Score) -> Void
 typealias CurrentRollIndex = Int
-
+typealias Title = String
