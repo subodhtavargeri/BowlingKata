@@ -1,5 +1,5 @@
 protocol GamePresenterProtocol {
-    func playerRolls(totalNumberOfPinKnocked: Score)
+    func playerRolls(totalNumberOfPinKnocked: score)
     func getGameFinalScore()
     func loadPresenter()
     func resetGame()
@@ -15,7 +15,7 @@ class GamePresenter: GamePresenterProtocol {
         self.view = view
     }
     
-    func playerRolls(totalNumberOfPinKnocked: Score) {
+    func playerRolls(totalNumberOfPinKnocked: score) {
         guard let pin = Pin(rawValue: totalNumberOfPinKnocked) else {
             return
         }

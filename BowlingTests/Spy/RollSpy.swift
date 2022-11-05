@@ -12,7 +12,7 @@ class RollSpy: RollProtocol {
         roll.removeAll()
     }
     
-    func getRawValue(index: currentRollIndex)-> Score {
+    func getRawValue(index: currentRollIndex)-> score {
         if isValidIndex(rollIndex: index) {
             return roll[index].rawValue
         }

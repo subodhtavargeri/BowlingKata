@@ -2,8 +2,6 @@
 
 class BowlingViewControllerSpy: BowlingViewProtocol {
     
-    
-    
     var title: String?
     var score: String?
     var counter = 0

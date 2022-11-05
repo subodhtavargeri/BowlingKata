@@ -60,7 +60,7 @@ class Game: GameProtocol {
         return roll.isValidIndex(rollIndex: rollIndex)
     }
     
-    private func normalScore(rollIndex: currentRollIndex)-> Score {
+    private func normalScore(rollIndex: currentRollIndex)-> score {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + secondRollForSameFrame)
     }
     
@@ -68,7 +68,7 @@ class Game: GameProtocol {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + secondRollForSameFrame) == Pin.ten.rawValue
     }
     
-    private func spareBonusScore(rollIndex: currentRollIndex)-> Score {
+    private func spareBonusScore(rollIndex: currentRollIndex)-> score {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + secondRollForSameFrame) +  roll.getRawValue(index: rollIndex + firstRollForNextFrameWhenItsAnSpare)
     }
     
@@ -76,7 +76,7 @@ class Game: GameProtocol {
         return score == Pin.ten
     }
     
-    private func strikeBonusScore(rollIndex: currentRollIndex)-> Score {
+    private func strikeBonusScore(rollIndex: currentRollIndex)-> score {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + firstRollForNextFrameWhenItsAnStrike) + roll.getRawValue(index: rollIndex + secondRollForNextFrame)
     }
     

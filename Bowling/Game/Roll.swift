@@ -2,7 +2,7 @@
 protocol RollProtocol {
     mutating func append(pin: Pin)
     mutating func resetRoll()
-    func getRawValue(index: currentRollIndex)-> Score
+    func getRawValue(index: currentRollIndex)-> score
     func pinValueAtIndex(index: currentRollIndex)-> Pin
     func isValidIndex(rollIndex: currentRollIndex)-> Bool
 }
@@ -19,7 +19,7 @@ struct Roll : RollProtocol {
         rolls.removeAll()
     }
     
-    func getRawValue(index: currentRollIndex)-> Score {
+    func getRawValue(index: currentRollIndex)-> score {
         if isValidIndex(rollIndex: index) {
             return rolls[index].rawValue
         }

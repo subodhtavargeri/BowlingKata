@@ -32,7 +32,7 @@ struct Constant {
     }
 }
 
-typealias Score = Int
-typealias finishedCalculatingGameScore = (Score) -> Void
+typealias score = Int
+typealias finishedCalculatingGameScore = (score) -> Void
 typealias currentRollIndex = Int
 
