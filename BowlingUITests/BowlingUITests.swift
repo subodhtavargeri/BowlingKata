@@ -2,7 +2,7 @@ import XCTest
 
 class BowlingUITests: XCTestCase {
     
-    func test_PlayGame_WithFinalScoreTwelve()  {
+    func test_PlayGame_WithFinalScoreTwelve() {
         let app = XCUIApplication()
         XCUIApplication().activate()
         for _ in 1...16 {
@@ -16,6 +16,19 @@ class BowlingUITests: XCTestCase {
         let labelFinalscoreStaticText = app.staticTexts["label_FinalScore"]
         XCTAssertTrue(labelFinalscoreStaticText.exists)
         XCTAssertEqual(labelFinalscoreStaticText.label, "Final Score: 12")
+        app.buttons["button_Reset"].tap()
     }
     
+    func test_PlayGame_WithPerfectScore_StrikeThroughOut() {
+        let app = XCUIApplication()
+        let labelFinalscoreStaticText = app.staticTexts["label_FinalScore"]
+        XCTAssertTrue(labelFinalscoreStaticText.exists)
+        XCTAssertEqual(labelFinalscoreStaticText.label, "Final Score: 0")
+        XCUIApplication().activate()
+        for _ in 1...12 {
+            app.buttons["button_TenPin"].tap()
+        }
+        app.buttons["button_FinalScore"].tap()
+        XCTAssertEqual(labelFinalscoreStaticText.label, "Final Score: 300")
+    }
 }
