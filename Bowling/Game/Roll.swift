@@ -15,16 +15,15 @@ struct Roll : RollProtocol {
         rolls.append(pin)
     }
     
+    mutating func resetRoll() {
+        rolls.removeAll()
+    }
+    
     func getRawValue(index: currentRollIndex)-> Score {
-        
         if isValidIndex(rollIndex: index) {
             return rolls[index].rawValue
         }
         return .zero
-    }
-    
-    mutating func resetRoll() {
-        rolls.removeAll()
     }
     
     func pinValueAtIndex(index: currentRollIndex)-> Pin {

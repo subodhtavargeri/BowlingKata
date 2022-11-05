@@ -46,9 +46,7 @@ extension BowlingViewController: BowlingViewProtocol {
         guard let rollScoreLabel = labelPinScore.filter({$0.tag == currentLabel}).first else {
             return
         }
-        
         rollScoreLabel.text = title
-       
     }
     
     func displayFinalGameScore(score: String) {
