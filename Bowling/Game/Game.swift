@@ -1,6 +1,6 @@
 protocol GameProtocol {
     func rollBalls(pins: Pin)
-    func calculateScore(scoreCalculationCompletion: finishedCalculatingGameScore)
+    func calculateScore(scoreCalculationCompletion: FinishedCalculatingGameScore)
     func resetGame()
 }
 
@@ -20,7 +20,7 @@ class Game: GameProtocol {
         roll.append(pin: pins)
     }
     
-    func calculateScore(scoreCalculationCompletion: finishedCalculatingGameScore) {
+    func calculateScore(scoreCalculationCompletion: FinishedCalculatingGameScore) {
         var rollIndex = 0
         var score = 0
         
@@ -56,19 +56,19 @@ class Game: GameProtocol {
         roll.resetRoll()
     }
     
-    private func isValidIndex(rollIndex: currentRollIndex)-> Bool {
+    private func isValidIndex(rollIndex: CurrentRollIndex)-> Bool {
         return roll.isValidIndex(rollIndex: rollIndex)
     }
     
-    private func normalScore(rollIndex: currentRollIndex)-> score {
+    private func normalScore(rollIndex: CurrentRollIndex)-> Score {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + secondRollForSameFrame)
     }
     
-    private func isSpare(rollIndex: currentRollIndex)-> Bool {
+    private func isSpare(rollIndex: CurrentRollIndex)-> Bool {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + secondRollForSameFrame) == Pin.ten.rawValue
     }
     
-    private func spareBonusScore(rollIndex: currentRollIndex)-> score {
+    private func spareBonusScore(rollIndex: CurrentRollIndex)-> Score {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + secondRollForSameFrame) +  roll.getRawValue(index: rollIndex + firstRollForNextFrameWhenItsAnSpare)
     }
     
@@ -76,7 +76,7 @@ class Game: GameProtocol {
         return score == Pin.ten
     }
     
-    private func strikeBonusScore(rollIndex: currentRollIndex)-> score {
+    private func strikeBonusScore(rollIndex: CurrentRollIndex)-> Score {
         return roll.getRawValue(index: rollIndex) + roll.getRawValue(index: rollIndex + firstRollForNextFrameWhenItsAnStrike) + roll.getRawValue(index: rollIndex + secondRollForNextFrame)
     }
     
