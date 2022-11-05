@@ -12,18 +12,18 @@ class RollSpy: RollProtocol {
         roll.removeAll()
     }
     
-    func getRawValue(index: Int)-> Score {
+    func getRawValue(index: currentRollIndex)-> Score {
         if isValidIndex(rollIndex: index) {
             return roll[index].rawValue
         }
         return .zero
     }
     
-    func pinValueAtIndex(index: Int)-> Pin {
+    func pinValueAtIndex(index: currentRollIndex)-> Pin {
         return roll[index]
     }
     
-    func isValidIndex(rollIndex: Int)-> Bool {
+    func isValidIndex(rollIndex: currentRollIndex)-> Bool {
         return roll.indices.contains(rollIndex)
     }
     
