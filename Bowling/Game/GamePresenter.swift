@@ -22,6 +22,7 @@ class GamePresenter: GamePresenterProtocol {
         
         game.rollBalls(pins: pin)
         view?.displayPinRollTitle(title: pin.pinSymbols())
+        incrementRoll(pin: pin)
     }
     
     func getGameFinalScore() {
@@ -43,5 +44,13 @@ class GamePresenter: GamePresenterProtocol {
     
     private func displayViewTitle() {
         view?.displayViewTitle(title: Constant.Title.screenTitle)
+    }
+    
+    private func incrementRoll(pin: Pin) {
+        if pin == Pin.ten {
+            view?.incrementLabel(value: 2)
+            return
+        }
+        view?.incrementLabel(value: 1)
     }
 }

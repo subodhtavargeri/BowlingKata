@@ -5,6 +5,7 @@ protocol BowlingViewProtocol: AnyObject {
     func displayFinalGameScore(score: String)
     func displayViewTitle(title: String)
     func resetScoreLabel()
+    func incrementLabel(value: Int)
 }
 
 class BowlingViewController: UIViewController {
@@ -47,7 +48,7 @@ extension BowlingViewController: BowlingViewProtocol {
         }
         
         rollScoreLabel.text = title
-        currentLabel += 1
+       
     }
     
     func displayFinalGameScore(score: String) {
@@ -63,5 +64,9 @@ extension BowlingViewController: BowlingViewProtocol {
             $0.text = ""
         }
         currentLabel = 1
+    }
+    
+    func incrementLabel(value: Int) {
+        currentLabel += value
     }
 }

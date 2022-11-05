@@ -77,4 +77,10 @@ class GamePresenterTests: XCTestCase {
         
         XCTAssertEqual(view.score, "")
     }
+    
+    func test_CounterValueIsOne_WhenUserKnocksOnePin() {
+        presenter?.playerRolls(totalNumberOfPinKnocked: 1)
+        
+        XCTAssertEqual(view.counter, 1)
+    }
 }

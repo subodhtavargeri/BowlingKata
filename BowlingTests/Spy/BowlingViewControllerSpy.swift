@@ -1,9 +1,12 @@
 @testable import Bowling
 
 class BowlingViewControllerSpy: BowlingViewProtocol {
+
+    
       
     var title: String?
     var score: String?
+    var counter = 0
     
     func displayPinRollTitle(title: String) {
         self.title = title
@@ -19,6 +22,14 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
     
     func resetScoreLabel() {
         self.score = ""
+    }
+    
+    func incrementLabel(value: Int) {
+        if self.title == String(Pin.ten.rawValue) {
+            counter = 2
+        }
+        
+        counter = 1
     }
 }
 
