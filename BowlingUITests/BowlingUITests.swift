@@ -28,7 +28,24 @@ class BowlingUITests: XCTestCase {
         for _ in 1...12 {
             app.buttons["button_TenPin"].tap()
         }
+        let labelFrameOneRollOne = app.staticTexts["label_FrameOneRollOne"]
+        XCTAssertTrue(labelFrameOneRollOne.exists)
+        XCTAssertEqual(labelFrameOneRollOne.label, "X")
+        
         app.buttons["button_FinalScore"].tap()
         XCTAssertEqual(labelFinalscoreStaticText.label, "Final Score: 300")
+        app.buttons["button_Reset"].tap()
+    }
+    
+    func test_ScoreIsResetToZero_WhenResetButtonIsPlayed() {
+        let app = XCUIApplication()
+        XCUIApplication().activate()
+        for _ in 1...16 {
+            app.buttons["button_OnePin"].tap()
+        }
+        app.buttons["button_Reset"].tap()
+        let labelFinalscoreStaticText = app.staticTexts["label_FinalScore"]
+        XCTAssertTrue(labelFinalscoreStaticText.exists)
+        XCTAssertEqual(labelFinalscoreStaticText.label, "Final Score: 0")
     }
 }
