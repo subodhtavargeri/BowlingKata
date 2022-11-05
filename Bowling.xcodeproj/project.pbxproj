@@ -19,7 +19,6 @@
 		5B803C472914FA9800819D26 /* BowlingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B803C462914FA9800819D26 /* BowlingFactory.swift */; };
 		5BBAC7CA29123EFA008D793A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAC7C929123EFA008D793A /* AppDelegate.swift */; };
 		5BBAC7CC29123EFA008D793A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAC7CB29123EFA008D793A /* SceneDelegate.swift */; };
-		5BBAC7CE29123EFA008D793A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAC7CD29123EFA008D793A /* ViewController.swift */; };
 		5BBAC7D129123EFA008D793A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAC7CF29123EFA008D793A /* Main.storyboard */; };
 		5BBAC7D329123EFC008D793A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAC7D229123EFC008D793A /* Assets.xcassets */; };
 		5BBAC7D629123EFC008D793A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAC7D429123EFC008D793A /* LaunchScreen.storyboard */; };
@@ -60,7 +59,6 @@
 		5BBAC7C629123EFA008D793A /* Bowling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bowling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBAC7C929123EFA008D793A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BBAC7CB29123EFA008D793A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BBAC7CD29123EFA008D793A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5BBAC7D029123EFA008D793A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BBAC7D229123EFC008D793A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BBAC7D529123EFC008D793A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 			children = (
 				5BBAC7C929123EFA008D793A /* AppDelegate.swift */,
 				5BBAC7CB29123EFA008D793A /* SceneDelegate.swift */,
-				5BBAC7CD29123EFA008D793A /* ViewController.swift */,
 				5BBAC7FB29124434008D793A /* Game */,
 				5B490A7E2913C453003FEA73 /* Constant.swift */,
 				5BBAC7D229123EFC008D793A /* Assets.xcassets */,
@@ -309,7 +306,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B803C452914F98500819D26 /* BowlingRouter.swift in Sources */,
-				5BBAC7CE29123EFA008D793A /* ViewController.swift in Sources */,
 				5BBAC7CA29123EFA008D793A /* AppDelegate.swift in Sources */,
 				5BBAC7CC29123EFA008D793A /* SceneDelegate.swift in Sources */,
 				5B490A832913D34B003FEA73 /* BowlingViewController.swift in Sources */,
