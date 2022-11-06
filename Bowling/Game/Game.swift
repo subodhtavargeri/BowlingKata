@@ -16,7 +16,7 @@ class Game: GameProtocol {
         static let maximumFrames = 10
         static let incrementCounterToGetNextRollWhenItsAnSpare = 2
         static let incrementCounterToGetNextRollWhenItsAnStrike = 1
-        static let incrementCounterToGetNextRollWhenItsAnNormal = 2
+        static let incrementCounterToGetNextRollWhenItsAnNormalRoll = 2
     }
     
     init(roll: RollProtocol) {
@@ -53,7 +53,7 @@ class Game: GameProtocol {
             }
             
             score += normalScore(rollIndex: rollIndex)
-            rollIndex += GameRules.incrementCounterToGetNextRollWhenItsAnNormal
+            rollIndex += GameRules.incrementCounterToGetNextRollWhenItsAnNormalRoll
         }
         
         scoreCalculationCompletion(score)
