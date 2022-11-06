@@ -48,9 +48,9 @@ class GamePresenter: GamePresenterProtocol {
     
     private func incrementRoll(pin: Pin) {
         if pin == Pin.ten {
-            view?.incrementLabel(value: 2)
+            view?.incrementRoll(value: 2)
             return
         }
-        view?.incrementLabel(value: 1)
+        view?.incrementRoll(value: 1)
     }
 }

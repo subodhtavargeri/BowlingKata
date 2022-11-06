@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B168E022917CF810015CAB9 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B168E012917CF810015CAB9 /* RouterProtocol.swift */; };
 		5B490A782913A7F6003FEA73 /* GamePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A772913A7F6003FEA73 /* GamePresenterTests.swift */; };
 		5B490A7A2913A86F003FEA73 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A792913A86F003FEA73 /* GamePresenter.swift */; };
 		5B490A7D2913A9BF003FEA73 /* GameSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A7C2913A9BF003FEA73 /* GameSpy.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B168E012917CF810015CAB9 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		5B490A772913A7F6003FEA73 /* GamePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterTests.swift; sourceTree = "<group>"; };
 		5B490A792913A86F003FEA73 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
 		5B490A7C2913A9BF003FEA73 /* GameSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSpy.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				5B490A842913ED12003FEA73 /* Roll.swift */,
+				5B168E012917CF810015CAB9 /* RouterProtocol.swift */,
 				5B803C442914F98500819D26 /* BowlingRouter.swift */,
 				5BBAC7FC29124466008D793A /* Game.swift */,
 				5B490A792913A86F003FEA73 /* GamePresenter.swift */,
@@ -304,6 +307,7 @@
 			files = (
 				5B803C452914F98500819D26 /* BowlingRouter.swift in Sources */,
 				5BBAC7CA29123EFA008D793A /* AppDelegate.swift in Sources */,
+				5B168E022917CF810015CAB9 /* RouterProtocol.swift in Sources */,
 				5BBAC7CC29123EFA008D793A /* SceneDelegate.swift in Sources */,
 				5B490A832913D34B003FEA73 /* BowlingViewController.swift in Sources */,
 				5B803C472914FA9800819D26 /* BowlingFactory.swift in Sources */,

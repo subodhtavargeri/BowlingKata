@@ -1,9 +1,5 @@
 import UIKit
 
-protocol RouterProtocol {
-    func routeToBowlingController()
-}
-
 class BowlingRouter: RouterProtocol {
     
     private let navigationController: UINavigationController

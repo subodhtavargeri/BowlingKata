@@ -2,10 +2,10 @@ import UIKit
 
 protocol BowlingViewProtocol: AnyObject {
     func displayPinRollTitle(title: Title)
-    func displayFinalGameScore(score: String)
+    func displayFinalGameScore(score: FinalGameScore)
     func displayViewTitle(title: Title)
     func resetScoreLabel()
-    func incrementLabel(value: Int)
+    func incrementRoll(value: Int)
 }
 
 class BowlingViewController: UIViewController {
@@ -14,7 +14,7 @@ class BowlingViewController: UIViewController {
     @IBOutlet var labelPinScore: [UILabel]!
     
     var presenter: GamePresenterProtocol?
-    private var currentLabel = 1
+    private var currentRoll = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,13 +43,13 @@ class BowlingViewController: UIViewController {
 extension BowlingViewController: BowlingViewProtocol {
     
     func displayPinRollTitle(title: Title) {
-        guard let rollScoreLabel = labelPinScore.filter({$0.tag == currentLabel}).first else {
+        guard let rollScoreLabel = labelPinScore.filter({$0.tag == currentRoll}).first else {
             return
         }
         rollScoreLabel.text = title
     }
     
-    func displayFinalGameScore(score: String) {
+    func displayFinalGameScore(score: FinalGameScore) {
         labelFinalScore.text = score
     }
     
@@ -61,10 +61,10 @@ extension BowlingViewController: BowlingViewProtocol {
         labelPinScore.forEach {
             $0.text = ""
         }
-        currentLabel = 1
+        currentRoll = 1
     }
     
-    func incrementLabel(value: Int) {
-        currentLabel += value
+    func incrementRoll(value: Int) {
+        currentRoll += value
     }
 }

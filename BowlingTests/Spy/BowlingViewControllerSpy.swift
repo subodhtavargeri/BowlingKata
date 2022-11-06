@@ -10,7 +10,7 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
         self.title = title
     }
     
-    func displayFinalGameScore(score: String) {
+    func displayFinalGameScore(score: FinalGameScore) {
         self.score = score
     }
     
@@ -22,7 +22,7 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
         self.score = "0"
     }
     
-    func incrementLabel(value: Int) {
+    func incrementRoll(value: Int) {
         counter = value
     }
 }

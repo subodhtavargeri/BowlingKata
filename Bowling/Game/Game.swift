@@ -12,6 +12,13 @@ class Game: GameProtocol {
     private var secondRollForNextFrame = 2
     private var firstRollForNextFrameWhenItsAnSpare = 2
     
+    private struct GameRules {
+        static let maximumFrames = 10
+        static let incrementCounterToGetNextRollWhenItsAnSpare = 2
+        static let incrementCounterToGetNextRollWhenItsAnStrike = 1
+        static let incrementCounterToGetNextRollWhenItsAnNormal = 2
+    }
+    
     init(roll: RollProtocol) {
         self.roll = roll
     }
@@ -24,7 +31,7 @@ class Game: GameProtocol {
         var rollIndex = 0
         var score = 0
         
-        for _ in 1...Constant.GameRules.maximumFrames {
+        for _ in 1...GameRules.maximumFrames {
             
             if !isValidIndex(rollIndex: rollIndex) {
                 scoreCalculationCompletion(score)
@@ -35,18 +42,18 @@ class Game: GameProtocol {
             
             if isStrike(score: rollScore) {
                 score += strikeBonusScore(rollIndex: rollIndex)
-                rollIndex += Constant.GameRules.incrementCounterToGetNextRollWhenItsAnStrike
+                rollIndex += GameRules.incrementCounterToGetNextRollWhenItsAnStrike
                 continue
             }
             
             if isSpare(rollIndex: rollIndex) {
                 score += spareBonusScore(rollIndex: rollIndex)
-                rollIndex += Constant.GameRules.incrementCounterToGetNextRollWhenItsAnSpare
+                rollIndex += GameRules.incrementCounterToGetNextRollWhenItsAnSpare
                 continue
             }
             
             score += normalScore(rollIndex: rollIndex)
-            rollIndex += Constant.GameRules.incrementCounterToGetNextRollWhenItsAnNormal
+            rollIndex += GameRules.incrementCounterToGetNextRollWhenItsAnNormal
         }
         
         scoreCalculationCompletion(score)
