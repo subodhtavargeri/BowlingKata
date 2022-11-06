@@ -2,9 +2,14 @@ import XCTest
 
 class BowlingUITests: XCTestCase {
     
-    func test_GameScoreIsTwelve_WhenPlayerPinsZeroFourOneFiveTwo_AndFinalScoreIsCalculated() {
-        let app = XCUIApplication()
+    var app: XCUIApplication!
+    override func setUp() {
+        app = XCUIApplication()
         XCUIApplication().activate()
+        app.buttons["button_Reset"].tap()
+    }
+    
+    func test_GameScoreIsTwelve_WhenPlayerPinsZeroFourOneFiveTwo_AndFinalScoreIsCalculated() {
         for _ in 1...16 {
             app.buttons["button_ZeroPin"].tap()
         }
@@ -16,12 +21,9 @@ class BowlingUITests: XCTestCase {
         let labelFinalscoreStaticText = app.staticTexts["label_FinalScore"]
         XCTAssertTrue(labelFinalscoreStaticText.exists)
         XCTAssertEqual(labelFinalscoreStaticText.label, "Final Score: 12")
-        app.buttons["button_Reset"].tap()
     }
     
     func test_GameScoreIsThreeHundred_WithPerfectScore_StrikeThroughOut() {
-        let app = XCUIApplication()
-        XCUIApplication().activate()
         for _ in 1...12 {
             app.buttons["button_TenPin"].tap()
         }
@@ -32,12 +34,9 @@ class BowlingUITests: XCTestCase {
         app.buttons["button_FinalScore"].tap()
         let labelFinalscoreStaticText = app.staticTexts["label_FinalScore"]
         XCTAssertEqual(labelFinalscoreStaticText.label, "Final Score: 300")
-        app.buttons["button_Reset"].tap()
     }
     
     func test_ScoreIsResetToZero_WhenResetButtonIsPlayed() {
-        let app = XCUIApplication()
-        XCUIApplication().activate()
         for _ in 1...16 {
             app.buttons["button_OnePin"].tap()
         }
@@ -48,8 +47,6 @@ class BowlingUITests: XCTestCase {
     }
     
     func test_GameScoreIsOneFifity_WhenPlayerPinsSpareThrought_GetsOneAdditionalFrame() {
-        let app = XCUIApplication()
-        XCUIApplication().activate()
         for _ in 1...21 {
             app.buttons["button_FivePin"].tap()
         }
