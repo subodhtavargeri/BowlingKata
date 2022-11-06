@@ -11,14 +11,6 @@ struct Roll : RollProtocol {
     
     private var rolls = [Pin]()
     
-    mutating func append(pin: Pin) {
-        rolls.append(pin)
-    }
-    
-    mutating func resetRoll() {
-        rolls.removeAll()
-    }
-    
     func getRawValue(index: CurrentRollIndex)-> Score {
         if isValidIndex(rollIndex: index) {
             return rolls[index].rawValue
@@ -32,5 +24,13 @@ struct Roll : RollProtocol {
     
     func isValidIndex(rollIndex: CurrentRollIndex)-> Bool {
         return rolls.indices.contains(rollIndex)
+    }
+    
+    mutating func append(pin: Pin) {
+        rolls.append(pin)
+    }
+    
+    mutating func resetRoll() {
+        rolls.removeAll()
     }
 }
