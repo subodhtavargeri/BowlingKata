@@ -32,19 +32,19 @@ class GamePresenterTests: XCTestCase {
         }
     }
     
-    func test_PinScoreIsDisplayed_WhenPlayerKnocksTwoPin() {
+    func test_PinScoreTwoIsDisplayed_WhenPlayerKnocksTwoPin() {
         presenter?.playerRolls(totalNumberOfPinKnocked: 2)
         
         XCTAssertEqual(view.title, String(2))
     }
     
-    func test_PinScoreXIsDisplayed_WhenPlayerKnocksTenPin_Strike() {
+    func test_PinScoreXIsDisplayed_WhenPlayerKnocksTenPins_Strike() {
         presenter?.playerRolls(totalNumberOfPinKnocked: 10)
         
         XCTAssertEqual(view.title, "X")
     }
     
-    func test_PinScoreSlashIsDisplayed_WhenPlayerKnocksFivePin_Spare() {
+    func test_PinScoreSlashIsDisplayed_WhenPlayerKnocksFivePins_Spare() {
         presenter?.playerRolls(totalNumberOfPinKnocked: 5)
         
         XCTAssertEqual(view.title, "/")
@@ -66,7 +66,7 @@ class GamePresenterTests: XCTestCase {
         XCTAssertEqual(view.title, Constant.Title.screenTitle)
     }
     
-    func test_ResetProtocolCalledPinValueIsNil_WhenUserClicksResetButtonFromView() {
+    func test_PinValueIsNil_WhenUserClicksResetButtonFromView() {
         presenter?.resetGame()
         
         XCTAssertNil(game.pins)
@@ -79,7 +79,7 @@ class GamePresenterTests: XCTestCase {
     }
     
     func test_CounterValueIsOne_WhenUserKnocksOnePin() {
-        presenter?.playerRolls(totalNumberOfPinKnocked: 1)
+        presenter?.playerRolls(totalNumberOfPinKnocked: Pin.one.rawValue)
         
         XCTAssertEqual(view.counter, 1)
     }
