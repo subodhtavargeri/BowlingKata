@@ -3,6 +3,7 @@ import XCTest
 class BowlingUITests: XCTestCase {
     
     var app = XCUIApplication()
+    
     override func setUp() {
         XCUIApplication().activate()
         app.buttons["button_Reset"].tap()
