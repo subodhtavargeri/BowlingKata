@@ -1,6 +1,6 @@
 protocol GameProtocol {
     func rollBalls(pins: Pin)
-    func calculateScore(scoreCalculationCompletion: FinishedCalculatingGameScore)
+    func calculateTotalGameScore(scoreCalculationCompletion: FinishedCalculatingGameScore)
     func resetGame()
 }
 
@@ -27,7 +27,7 @@ class Game: GameProtocol {
         roll.append(pin: pins)
     }
     
-    func calculateScore(scoreCalculationCompletion: FinishedCalculatingGameScore) {
+    func calculateTotalGameScore(scoreCalculationCompletion: FinishedCalculatingGameScore) {
         var rollIndex = 0
         var score = 0
         

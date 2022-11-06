@@ -27,7 +27,7 @@ class GamePresenterTests: XCTestCase {
         
         presenter?.getGameFinalScore()
         
-        game.calculateScore { score in
+        game.calculateTotalGameScore { score in
             XCTAssertEqual(score, 20)
         }
     }
@@ -55,7 +55,7 @@ class GamePresenterTests: XCTestCase {
         
         presenter?.getGameFinalScore()
         
-        game.calculateScore { score in
+        game.calculateTotalGameScore { score in
             XCTAssertEqual(view.score, "20")
         }
     }
