@@ -19,7 +19,7 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
     }
     
     func resetScoreLabel() {
-        self.score = ""
+        self.score = "0"
     }
     
     func incrementLabel(value: Int) {

@@ -66,7 +66,7 @@ class GamePresenterTests: XCTestCase {
         XCTAssertEqual(view.title, Constant.Title.screenTitle)
     }
     
-    func test_ResetProtocolCalled_WhenUserClicksResetButtonFromView() {
+    func test_ResetProtocolCalledPinValueIsNil_WhenUserClicksResetButtonFromView() {
         presenter?.resetGame()
         
         XCTAssertNil(game.pins)
@@ -75,7 +75,7 @@ class GamePresenterTests: XCTestCase {
     func test_ScoreZeroIsDisplayedOnView_WhenResetButtonIsClickedFromView() {
         presenter?.resetGame()
         
-        XCTAssertEqual(view.score, "")
+        XCTAssertEqual(view.score, "0")
     }
     
     func test_CounterValueIsOne_WhenUserKnocksOnePin() {
