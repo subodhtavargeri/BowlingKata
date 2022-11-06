@@ -1,10 +1,10 @@
 
 protocol RollProtocol {
-    mutating func append(pin: Pin)
-    mutating func resetRoll()
     func getRawValue(index: CurrentRollIndex)-> Score
     func pinValueAtIndex(index: CurrentRollIndex)-> Pin
     func isValidIndex(rollIndex: CurrentRollIndex)-> Bool
+    mutating func append(pin: Pin)
+    mutating func resetRoll()
 }
 
 struct Roll : RollProtocol {

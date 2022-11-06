@@ -17,4 +17,7 @@ class GameSpy: GameProtocol {
         self.pins = nil
     }
     
+    func isStrike(score: Pin) -> Bool {
+        return score == Pin.ten
+    }
 }

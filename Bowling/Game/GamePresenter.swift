@@ -50,10 +50,11 @@ class GamePresenter: GamePresenterProtocol {
     }
     
     private func incrementRoll(pin: Pin) {
-        if pin == Pin.ten {
+        if game.isStrike(score: pin) {
             view?.moveToNextRollOrFrame(value: moveToNextFrameWhenItsAnStike)
             return
         }
         view?.moveToNextRollOrFrame(value: moveToNextFrameOrRoll)
     }
+    
 }
