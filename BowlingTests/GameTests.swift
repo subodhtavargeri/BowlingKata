@@ -165,6 +165,17 @@ class GameTests: XCTestCase {
         })
     }
     
+    func test_GameScoreIsNinety_WhenPlayerScoresNinePinsANdZeroPins_InSamePatternInAllTenFrames() {
+        let pinArray = [Pin.nine,Pin.zero,Pin.nine,Pin.zero,Pin.nine,Pin.zero,Pin.nine,Pin.zero
+                        ,Pin.nine,Pin.zero,Pin.nine,Pin.zero,Pin.nine,Pin.zero,Pin.nine,Pin.zero
+                        ,Pin.nine,Pin.zero,Pin.nine,Pin.zero]
+        loopThroughGameRollBalls(Pins: pinArray)
+        
+        game?.calculateScore(scoreCalculationCompletion: { originalScore in
+            XCTAssertEqual(originalScore, 90)
+        })
+    }
+    
     func test_GameScoreIsZero_WhenGameIsReset() {
         game?.resetGame()
         
