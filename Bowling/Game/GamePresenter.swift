@@ -10,6 +10,9 @@ class GamePresenter: GamePresenterProtocol {
     let game: GameProtocol
     weak var view: BowlingViewProtocol?
     
+    private let moveToNextFrameWhenItsAnStike = 2
+    private let moveToNextFrameOrRoll = 1
+    
     init(game: GameProtocol, view: BowlingViewProtocol) {
         self.game = game
         self.view = view
@@ -48,9 +51,9 @@ class GamePresenter: GamePresenterProtocol {
     
     private func incrementRoll(pin: Pin) {
         if pin == Pin.ten {
-            view?.incrementRoll(value: 2)
+            view?.moveToNextRollOrFrame(value: moveToNextFrameWhenItsAnStike)
             return
         }
-        view?.incrementRoll(value: 1)
+        view?.moveToNextRollOrFrame(value: moveToNextFrameOrRoll)
     }
 }

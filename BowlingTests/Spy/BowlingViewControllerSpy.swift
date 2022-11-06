@@ -22,7 +22,7 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
         self.score = "0"
     }
     
-    func incrementRoll(value: Int) {
+    func moveToNextRollOrFrame(value: NextRollOrFrame) {
         counter = value
     }
 }

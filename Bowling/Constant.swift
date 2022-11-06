@@ -29,3 +29,4 @@ typealias FinishedCalculatingGameScore = (Score) -> Void
 typealias CurrentRollIndex = Int
 typealias Title = String
 typealias FinalGameScore = String
+typealias NextRollOrFrame = Int
