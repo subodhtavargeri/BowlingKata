@@ -3,7 +3,7 @@ enum Pin: Int {
     
     func pinSymbols()-> String {
         if self == .ten {
-            return "X"
+            return Constant.SpecialPinSymbols.strike
         }
         
         return String(rawValue)
@@ -17,6 +17,11 @@ struct Constant {
     }
     struct Message {
         static let gameScore = "Final Score: %@"
+    }
+    
+    struct SpecialPinSymbols {
+        static let strike = "X"
+        static let spare = "-"
     }
 }
 

@@ -25,13 +25,19 @@ class GamePresenter: GamePresenterProtocol {
         
         game.rollBalls(pins: pin) { isSpare in
             if isSpare {
-                view?.displayPinRollTitle(title: "/")
+                view?.displayPinRollTitle(title: Constant.SpecialPinSymbols.spare)
+                incrementRoll(moveToRoll: moveToNextFrameOrRoll)
             }
             else {
                 view?.displayPinRollTitle(title: pin.pinSymbols())
+                if pin == .ten {
+                    incrementRoll(moveToRoll: moveToNextFrameWhenItsAnStike)
+                }
+                else {
+                    incrementRoll(moveToRoll: moveToNextFrameOrRoll)
+                }
             }
         }
-        incrementRoll(pin: pin)
     }
     
     func getGameFinalScore() {
@@ -55,12 +61,8 @@ class GamePresenter: GamePresenterProtocol {
         view?.displayViewTitle(title: Constant.Title.screenTitle)
     }
     
-    private func incrementRoll(pin: Pin) {
-        if game.isStrike(score: pin) {
-            view?.moveToNextRoll(value: moveToNextFrameWhenItsAnStike)
-            return
-        }
-        view?.moveToNextRoll(value: moveToNextFrameOrRoll)
+    private func incrementRoll(moveToRoll: NextRoll) {
+        view?.moveToNextRoll(value: moveToRoll)
     }
     
 }
