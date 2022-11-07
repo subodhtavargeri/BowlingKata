@@ -7,8 +7,8 @@ protocol GamePresenterProtocol {
 
 class GamePresenter: GamePresenterProtocol {
     
-    let game: GameProtocol
-    weak var view: BowlingViewProtocol?
+    private let game: GameProtocol
+    private weak var view: BowlingViewProtocol?
     
     private let moveToNextFrameWhenItsAnStike = 2
     private let moveToNextFrameOrRoll = 1
