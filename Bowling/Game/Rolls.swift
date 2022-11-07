@@ -46,7 +46,7 @@ struct Rolls : RollProtocol {
     
     private func isSpareForAnFrame()-> Bool {
         
-        if roll.count > 1 {
+        if isRollCountMoreThanOne() {
             let currentRollValueForCurrentFrame = roll[roll.count-1].rawValue
             let previousRollValueForCurrentFrame = roll[roll.count-2].rawValue
             
@@ -56,5 +56,8 @@ struct Rolls : RollProtocol {
         }
         return false
     }
-
+    
+    private func isRollCountMoreThanOne()-> Bool {
+        return roll.count > 1
+    }
 }
