@@ -10,8 +10,8 @@ protocol BowlingViewProtocol: AnyObject {
 
 class BowlingViewController: UIViewController {
     
-    @IBOutlet weak var labelFinalScore: UILabel!
-    @IBOutlet var labelPinScore: [UILabel]!
+    @IBOutlet private weak var labelFinalScore: UILabel!
+    @IBOutlet private var labelPinScore: [UILabel]!
     
     var presenter: GamePresenterProtocol?
     private var currentRoll = 1
