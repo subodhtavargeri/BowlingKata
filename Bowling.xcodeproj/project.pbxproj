@@ -14,7 +14,7 @@
 		5B490A7F2913C453003FEA73 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A7E2913C453003FEA73 /* Constant.swift */; };
 		5B490A812913D31E003FEA73 /* BowlingViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A802913D31E003FEA73 /* BowlingViewControllerSpy.swift */; };
 		5B490A832913D34B003FEA73 /* BowlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A822913D34B003FEA73 /* BowlingViewController.swift */; };
-		5B490A852913ED12003FEA73 /* Roll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A842913ED12003FEA73 /* Roll.swift */; };
+		5B490A852913ED12003FEA73 /* Rolls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A842913ED12003FEA73 /* Rolls.swift */; };
 		5B490A87291403B1003FEA73 /* RollSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B490A86291403B1003FEA73 /* RollSpy.swift */; };
 		5B803C452914F98500819D26 /* BowlingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B803C442914F98500819D26 /* BowlingRouter.swift */; };
 		5B803C472914FA9800819D26 /* BowlingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B803C462914FA9800819D26 /* BowlingFactory.swift */; };
@@ -53,7 +53,7 @@
 		5B490A7E2913C453003FEA73 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5B490A802913D31E003FEA73 /* BowlingViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingViewControllerSpy.swift; sourceTree = "<group>"; };
 		5B490A822913D34B003FEA73 /* BowlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingViewController.swift; sourceTree = "<group>"; };
-		5B490A842913ED12003FEA73 /* Roll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roll.swift; sourceTree = "<group>"; };
+		5B490A842913ED12003FEA73 /* Rolls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rolls.swift; sourceTree = "<group>"; };
 		5B490A86291403B1003FEA73 /* RollSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollSpy.swift; sourceTree = "<group>"; };
 		5B803C442914F98500819D26 /* BowlingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingRouter.swift; sourceTree = "<group>"; };
 		5B803C462914FA9800819D26 /* BowlingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingFactory.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		5BBAC7FB29124434008D793A /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				5B490A842913ED12003FEA73 /* Roll.swift */,
+				5B490A842913ED12003FEA73 /* Rolls.swift */,
 				5B168E012917CF810015CAB9 /* RouterProtocol.swift */,
 				5B803C442914F98500819D26 /* BowlingRouter.swift */,
 				5BBAC7FC29124466008D793A /* Game.swift */,
@@ -313,7 +313,7 @@
 				5B803C472914FA9800819D26 /* BowlingFactory.swift in Sources */,
 				5B490A7A2913A86F003FEA73 /* GamePresenter.swift in Sources */,
 				5BBAC7FD29124466008D793A /* Game.swift in Sources */,
-				5B490A852913ED12003FEA73 /* Roll.swift in Sources */,
+				5B490A852913ED12003FEA73 /* Rolls.swift in Sources */,
 				5B490A7F2913C453003FEA73 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

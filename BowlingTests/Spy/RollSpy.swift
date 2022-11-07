@@ -1,6 +1,6 @@
 @testable import Bowling
 
-class RollSpy: RollProtocol {
+class RollsSpy: RollProtocol {
     
     var roll = [Pin]()
     

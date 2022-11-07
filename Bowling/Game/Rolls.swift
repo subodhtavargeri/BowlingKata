@@ -7,7 +7,7 @@ protocol RollProtocol {
     mutating func resetRoll()
 }
 
-struct Roll : RollProtocol {
+struct Rolls : RollProtocol {
     
     private var rolls = [Pin]()
     

@@ -3,8 +3,8 @@ import UIKit
 struct BowlingFactory {
     
     static func create(router: RouterProtocol) -> BowlingViewController {
-        let roll = Roll()
-        let game = Game(roll: roll)
+        let rolls = Rolls()
+        let game = Game(roll: rolls)
         guard let view = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "BowlingViewController") as? BowlingViewController else {
             fatalError("Unable to Instantiate TicTacToeViewController")
         }

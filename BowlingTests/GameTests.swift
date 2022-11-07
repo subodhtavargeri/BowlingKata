@@ -4,10 +4,10 @@ import XCTest
 class GameTests: XCTestCase {
     
     var game: Game?
-    let pin = RollSpy()
+    let rolls = RollsSpy()
     
     override func setUp() {
-        game = Game(roll: pin)
+        game = Game(roll: rolls)
     }
     
     func test_GameScoreIsZero_WhenGameBegins() {
