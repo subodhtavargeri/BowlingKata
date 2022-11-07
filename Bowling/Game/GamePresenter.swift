@@ -22,21 +22,19 @@ class GamePresenter: GamePresenterProtocol {
         guard let pin = Pin(rawValue: totalNumberOfPinKnocked) else {
             return
         }
-        
-        game.rollBalls(pins: pin) { isSpare in
-            if isSpare {
+        game.rollBalls(pins: pin) { isBonus in
+            if isBonus == .spare {
                 view?.displayPinRollTitle(title: Constant.SpecialPinSymbols.spare)
                 incrementRoll(moveToRoll: moveToNextFrameOrRoll)
+                return
             }
-            else {
-                view?.displayPinRollTitle(title: pin.pinSymbols())
-                if pin == .ten {
-                    incrementRoll(moveToRoll: moveToNextFrameWhenItsAnStike)
-                }
-                else {
-                    incrementRoll(moveToRoll: moveToNextFrameOrRoll)
-                }
+            if isStrike(pin: pin) {
+                view?.displayPinRollTitle(title: Constant.SpecialPinSymbols.strike)
+                incrementRoll(moveToRoll: moveToNextFrameWhenItsAnStike)
+                return
             }
+            view?.displayPinRollTitle(title: pin.pinSymbols())
+            incrementRoll(moveToRoll: moveToNextFrameOrRoll)
         }
     }
     
@@ -63,6 +61,10 @@ class GamePresenter: GamePresenterProtocol {
     
     private func incrementRoll(moveToRoll: NextRoll) {
         view?.moveToNextRoll(value: moveToRoll)
+    }
+    
+    private func isStrike(pin: Pin)-> Bool {
+        return ((view?.getCurrentRoll() ?? 0) % 2 != 0 && pin == .ten)
     }
     
 }

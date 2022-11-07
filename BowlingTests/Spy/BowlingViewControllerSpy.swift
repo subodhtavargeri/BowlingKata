@@ -25,5 +25,8 @@ class BowlingViewControllerSpy: BowlingViewProtocol {
     func moveToNextRoll(value: NextRoll) {
         counter = value
     }
+    func getCurrentRoll() -> Int {
+        counter
+    }
 }
 

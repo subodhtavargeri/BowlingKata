@@ -1,6 +1,7 @@
 @testable import Bowling
 
 class GameSpy: GameProtocol {
+    
     var score = 0
     var pins: Pin?
     
@@ -16,9 +17,9 @@ class GameSpy: GameProtocol {
         return score == Pin.ten
     }
     
-    func rollBalls(pins: Pin, checkForAnSpareFrameCompletion: (Bool) -> Void) {
+    func rollBalls(pins: Pin, checkForAnSpareFrameCompletion: (Bonus) -> Void) {
         self.pins = pins
-        checkForAnSpareFrameCompletion(false)
+        checkForAnSpareFrameCompletion(.none)
     }
     
 }

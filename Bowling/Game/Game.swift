@@ -1,5 +1,5 @@
 protocol GameProtocol {
-    func rollBalls(pins: Pin, checkForAnSpareFrameCompletion: (Bool) -> Void)
+    func rollBalls(pins: Pin, checkForAnSpareFrameCompletion: (Bonus) -> Void)
     func calculateTotalGameScore(scoreCalculationCompletion: FinishedCalculatingGameScore)
     func resetGame()
     func isStrike(score: Pin)-> Bool
@@ -24,11 +24,10 @@ class Game: GameProtocol {
         self.roll = roll
     }
     
-    func rollBalls(pins: Pin, checkForAnSpareFrameCompletion: (Bool) -> Void) {
+    func rollBalls(pins: Pin, checkForAnSpareFrameCompletion: (Bonus) -> Void) {
         roll.append(pin: pins)
-        checkForAnSpareFrameCompletion(roll.isSpareForAnFrameUI())
+        checkForAnSpareFrameCompletion(roll.isBonusForFrame())
     }
-    
     
     func calculateTotalGameScore(scoreCalculationCompletion: FinishedCalculatingGameScore) {
         var rollIndex = 0

@@ -35,7 +35,9 @@ class GamePresenterTests: XCTestCase {
     func test_PinScoreTwoIsDisplayed_WhenPlayerKnocksTwoPin() {
         presenter?.playerRolls(totalNumberOfPinKnocked: 2)
         
-        XCTAssertEqual(view.title, String(2))
+        game.rollBalls(pins: .two, checkForAnSpareFrameCompletion: { isSpare in
+            XCTAssertEqual(view.title, Pin.two.pinSymbols())
+        })
     }
     
     func test_PinScoreXIsDisplayed_WhenPlayerKnocksTenPins_Strike() {
@@ -87,6 +89,18 @@ class GamePresenterTests: XCTestCase {
     func test_CounterValueIsTwo_WhenUserKnocksTenPin_Stike() {
         presenter?.playerRolls(totalNumberOfPinKnocked: Pin.ten.rawValue)
         
-        XCTAssertEqual(view.counter, 2)
+        game.rollBalls(pins: .ten, checkForAnSpareFrameCompletion: { isSpare in
+            XCTAssertEqual(view.title, Constant.SpecialPinSymbols.strike)
+        })
+    }
+    
+    func test_CounterValueIsIncrementByTwo_WhenUserKnocksTenPin_Stike() {
+        presenter?.playerRolls(totalNumberOfPinKnocked: Pin.zero.rawValue)
+        presenter?.playerRolls(totalNumberOfPinKnocked: Pin.zero.rawValue)
+        presenter?.playerRolls(totalNumberOfPinKnocked: Pin.ten.rawValue)
+        
+        game.rollBalls(pins: .ten, checkForAnSpareFrameCompletion: { isSpare in
+            XCTAssertEqual(view.counter, 2)
+        })
     }
 }

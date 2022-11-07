@@ -5,7 +5,7 @@ protocol RollProtocol {
     func isValidIndex(rollIndex: CurrentRollIndex)-> Bool
     mutating func append(pin: Pin)
     mutating func resetRoll()
-    func isSpareForAnFrameUI()-> Bool
+    func isBonusForFrame()-> Bonus
 }
 
 struct Rolls : RollProtocol {
@@ -13,6 +13,7 @@ struct Rolls : RollProtocol {
     private var roll = [Pin]()
     
     func getRawValue(index: CurrentRollIndex)-> Score {
+        
         if isValidIndex(rollIndex: index) {
             return roll[index].rawValue
         }
@@ -35,15 +36,33 @@ struct Rolls : RollProtocol {
         roll.removeAll()
     }
     
-    func isSpareForAnFrameUI()-> Bool {
-        if  roll.count % 2 == 0 {
-           
+    func isBonusForFrame()-> Bonus {
+        
+        if isSpareForAnFrame() {
+            return .spare
+        }
+        return .none
+    }
+    
+    private func isSpareForAnFrame()-> Bool {
+        
+        if roll.count > 1 {
             let currentRollValueForCurrentFrame = roll[roll.count-1].rawValue
             let previousRollValueForCurrentFrame = roll[roll.count-2].rawValue
             
-            return currentRollValueForCurrentFrame + previousRollValueForCurrentFrame == Pin.ten.rawValue
+            if currentRollValueForCurrentFrame + previousRollValueForCurrentFrame == Pin.ten.rawValue {
+                return true
+            }
         }
         return false
+    }
+    
+    private func isStrikeForAnFrame()-> Bool {
         
+        if roll.count % 2 != 0 {
+            let currentRollValueForCurrentFrame = roll[roll.count-1].rawValue
+            return currentRollValueForCurrentFrame == Pin.ten.rawValue
+        }
+        return false
     }
 }

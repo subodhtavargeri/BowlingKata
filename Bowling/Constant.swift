@@ -5,6 +5,9 @@ enum Pin: Int {
         if self == .ten {
             return Constant.SpecialPinSymbols.strike
         }
+        if self == .zero {
+            return Constant.SpecialPinSymbols.miss
+        }
         
         return String(rawValue)
     }
@@ -21,8 +24,14 @@ struct Constant {
     
     struct SpecialPinSymbols {
         static let strike = "X"
-        static let spare = "-"
+        static let spare = "/"
+        static let miss = "-"
     }
+    
+}
+
+enum Bonus {
+    case strike, spare, none
 }
 
 typealias Score = Int

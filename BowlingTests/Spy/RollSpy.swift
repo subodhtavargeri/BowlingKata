@@ -1,6 +1,10 @@
 @testable import Bowling
 
 class RollsSpy: RollProtocol {
+    func isBonusForFrame() -> Bonus {
+        .spare
+    }
+    
     
     var roll = [Pin]()
     
