@@ -6,7 +6,7 @@ protocol BowlingViewProtocol: AnyObject {
     func displayViewTitle(title: Title)
     func resetScoreLabel()
     func moveToNextRoll(value: NextRoll)
-    func getCurrentRoll()-> Int
+    func getCurrentRoll()-> CurrentRollIndex
 }
 
 class BowlingViewController: UIViewController {
@@ -70,7 +70,7 @@ extension BowlingViewController: BowlingViewProtocol {
         currentRoll += value
     }
     
-    func getCurrentRoll()-> Int {
+    func getCurrentRoll()-> CurrentRollIndex {
         return currentRoll
     }
 }
