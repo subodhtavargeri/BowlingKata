@@ -36,6 +36,14 @@ struct Rolls : RollProtocol {
     }
     
     func isSpareForAnFrameUI()-> Bool {
-        return roll.count % 2 == 0 && (roll[roll.count-1].rawValue +  roll[roll.count-2].rawValue == Pin.ten.rawValue)
+        if  roll.count % 2 == 0 {
+           
+            let currentRollValueForCurrentFrame = roll[roll.count-1].rawValue
+            let previousRollValueForCurrentFrame = roll[roll.count-2].rawValue
+            
+            return currentRollValueForCurrentFrame + previousRollValueForCurrentFrame == Pin.ten.rawValue
+        }
+        return false
+        
     }
 }
