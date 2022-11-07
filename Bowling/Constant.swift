@@ -19,7 +19,7 @@ struct Constant {
         static let screenTitle = "Bowling"
     }
     struct Message {
-        static let gameScore = "Final Score: %@"
+        static let gameScore = "Final Game Score: %@"
     }
     
     struct SpecialPinSymbols {
