@@ -5,6 +5,7 @@ protocol RollProtocol {
     func isValidIndex(rollIndex: CurrentRollIndex)-> Bool
     mutating func append(pin: Pin)
     mutating func resetRoll()
+    func isSpareForAnFrameUI()-> Bool
 }
 
 struct Rolls : RollProtocol {
@@ -32,5 +33,9 @@ struct Rolls : RollProtocol {
     
     mutating func resetRoll() {
         rolls.removeAll()
+    }
+    
+    func isSpareForAnFrameUI()-> Bool {
+        return rolls.count % 2 == 0 && (rolls[rolls.count-1].rawValue +  rolls[rolls.count-2].rawValue == Pin.ten.rawValue)
     }
 }

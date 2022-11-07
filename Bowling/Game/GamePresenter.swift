@@ -23,8 +23,14 @@ class GamePresenter: GamePresenterProtocol {
             return
         }
         
-        game.rollBalls(pins: pin)
-        view?.displayPinRollTitle(title: pin.pinSymbols())
+        game.rollBalls(pins: pin) { isSpare in
+            if isSpare {
+                view?.displayPinRollTitle(title: "/")
+            }
+            else {
+                view?.displayPinRollTitle(title: pin.pinSymbols())
+            }
+        }
         incrementRoll(pin: pin)
     }
     

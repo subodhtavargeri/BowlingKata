@@ -18,13 +18,17 @@ class GameTests: XCTestCase {
     
     private func rollBalls(knockedPins: Pin, roll: Int) {
         for _ in 1...roll {
-            let _ = game?.rollBalls(pins: knockedPins)
+            game?.rollBalls(pins: knockedPins, checkForAnSpareFrameCompletion: { isSpare in
+                
+            })
         }
     }
     
     private func loopThroughGameRollBalls(Pins: [Pin]) {
         for pin in Pins {
-            game?.rollBalls(pins: pin)
+            game?.rollBalls(pins: pin, checkForAnSpareFrameCompletion: { isSpare in
+                
+            })
         }
     }
     

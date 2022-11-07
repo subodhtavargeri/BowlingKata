@@ -27,4 +27,7 @@ class RollsSpy: RollProtocol {
         return roll.indices.contains(rollIndex)
     }
     
+    func isSpareForAnFrameUI() -> Bool {
+        return roll.count % 2 == 0 && (roll[roll.count-1].rawValue +  roll[roll.count-2].rawValue == Pin.ten.rawValue)
+    }
 }
