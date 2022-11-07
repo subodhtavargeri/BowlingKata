@@ -30,7 +30,7 @@ class GamePresenter: GamePresenterProtocol {
                 return
             }
             if isStrike(pin: pin) {
-                view?.displayPinRollTitle(title: Constant.SpecialPinSymbols.strike)
+                view?.displayPinRollTitle(title: pin.pinSymbols())
                 incrementRoll(moveToRoll: moveToNextFrameWhenItsAnStike)
                 return
             }
