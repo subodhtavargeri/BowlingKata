@@ -47,7 +47,7 @@ class GamePresenterTests: XCTestCase {
     func test_PinScoreSlashIsDisplayed_WhenPlayerKnocksFivePins_Spare() {
         presenter?.playerRolls(totalNumberOfPinKnocked: 5)
         
-        XCTAssertEqual(view.title, "/")
+        XCTAssertEqual(view.title, Pin.five.pinSymbols())
     }
     
     func test_GameFinalScoreTwentyIsDisplayed_WhenAllFramesAreFinished() {

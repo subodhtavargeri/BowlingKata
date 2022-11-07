@@ -52,7 +52,7 @@ class BowlingUITests: XCTestCase {
         }
         let labelFrameOneRollOne = app.staticTexts["label_FrameOneRollOne"]
         XCTAssertTrue(labelFrameOneRollOne.exists)
-        XCTAssertEqual(labelFrameOneRollOne.label,"/")
+        XCTAssertEqual(labelFrameOneRollOne.label,"5")
         
         app.buttons["button_FinalScore"].tap()
         let labelFinalscoreStaticText = app.staticTexts["label_FinalScore"]
