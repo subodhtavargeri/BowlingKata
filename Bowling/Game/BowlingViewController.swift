@@ -15,6 +15,7 @@ class BowlingViewController: UIViewController {
     @IBOutlet private var labelPinScore: [UILabel]!
     
     var presenter: GamePresenterProtocol?
+    
     private var currentRoll = 1
     
     override func viewDidLoad() {

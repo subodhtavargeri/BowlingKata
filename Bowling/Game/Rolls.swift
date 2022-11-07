@@ -56,13 +56,5 @@ struct Rolls : RollProtocol {
         }
         return false
     }
-    
-    private func isStrikeForAnFrame()-> Bool {
-        
-        if roll.count % 2 != 0 {
-            let currentRollValueForCurrentFrame = roll[roll.count-1].rawValue
-            return currentRollValueForCurrentFrame == Pin.ten.rawValue
-        }
-        return false
-    }
+
 }

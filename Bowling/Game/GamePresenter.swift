@@ -23,6 +23,7 @@ class GamePresenter: GamePresenterProtocol {
             return
         }
         game.rollBalls(pins: pin) { isBonus in
+            
             if isBonus == .spare {
                 view?.displayPinRollTitle(title: Constant.SpecialPinSymbols.spare)
                 incrementRoll(moveToRoll: moveToNextFrameOrRoll)
@@ -39,6 +40,7 @@ class GamePresenter: GamePresenterProtocol {
     }
     
     func getGameFinalScore() {
+        
         game.calculateTotalGameScore { score in
             let message = String(format: Constant.Message.gameScore, arguments: [String(score)])
             view?.displayFinalGameScore(score: message)

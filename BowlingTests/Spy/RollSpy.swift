@@ -1,10 +1,6 @@
 @testable import Bowling
 
 class RollsSpy: RollProtocol {
-    func isBonusForFrame() -> Bonus {
-        .spare
-    }
-    
     
     var roll = [Pin]()
     
@@ -17,6 +13,7 @@ class RollsSpy: RollProtocol {
     }
     
     func getRawValue(index: CurrentRollIndex)-> Score {
+        
         if isValidIndex(rollIndex: index) {
             return roll[index].rawValue
         }
@@ -34,4 +31,9 @@ class RollsSpy: RollProtocol {
     func isSpareForAnFrameUI() -> Bool {
         return roll.count % 2 == 0 && (roll[roll.count-1].rawValue +  roll[roll.count-2].rawValue == Pin.ten.rawValue)
     }
+    
+    func isBonusForFrame() -> Bonus {
+        .spare
+    }
+    
 }

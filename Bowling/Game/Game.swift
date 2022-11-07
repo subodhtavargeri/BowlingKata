@@ -2,7 +2,6 @@ protocol GameProtocol {
     func rollBalls(pins: Pin, checkForAnSpareFrameCompletion: (Bonus) -> Void)
     func calculateTotalGameScore(scoreCalculationCompletion: FinishedCalculatingGameScore)
     func resetGame()
-    func isStrike(score: Pin)-> Bool
 }
 
 class Game: GameProtocol {
@@ -65,7 +64,7 @@ class Game: GameProtocol {
         roll.resetRoll()
     }
     
-    func isStrike(score: Pin)-> Bool {
+    private func isStrike(score: Pin)-> Bool {
         return score == Pin.ten
     }
     
