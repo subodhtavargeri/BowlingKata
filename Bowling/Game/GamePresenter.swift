@@ -66,7 +66,11 @@ class GamePresenter: GamePresenterProtocol {
     }
     
     private func isStrike(pin: Pin)-> Bool {
-        return ((view?.getCurrentRoll() ?? 0) % 2 != 0 && pin == .ten)
+        return (isFirstRollForFrame() && pin == .ten)
+    }
+    
+    private func isFirstRollForFrame()-> Bool {
+        return (view?.getCurrentRoll() ?? 0) % 2 != 0
     }
     
 }
