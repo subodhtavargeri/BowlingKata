@@ -10,32 +10,32 @@ protocol RollProtocol {
 
 struct Rolls : RollProtocol {
     
-    private var rolls = [Pin]()
+    private var roll = [Pin]()
     
     func getRawValue(index: CurrentRollIndex)-> Score {
         if isValidIndex(rollIndex: index) {
-            return rolls[index].rawValue
+            return roll[index].rawValue
         }
         return .zero
     }
     
     func pinValueAtIndex(index: CurrentRollIndex)-> Pin {
-        return rolls[index]
+        return roll[index]
     }
     
     func isValidIndex(rollIndex: CurrentRollIndex)-> Bool {
-        return rolls.indices.contains(rollIndex)
+        return roll.indices.contains(rollIndex)
     }
     
     mutating func append(pin: Pin) {
-        rolls.append(pin)
+        roll.append(pin)
     }
     
     mutating func resetRoll() {
-        rolls.removeAll()
+        roll.removeAll()
     }
     
     func isSpareForAnFrameUI()-> Bool {
-        return rolls.count % 2 == 0 && (rolls[rolls.count-1].rawValue +  rolls[rolls.count-2].rawValue == Pin.ten.rawValue)
+        return roll.count % 2 == 0 && (roll[roll.count-1].rawValue +  roll[roll.count-2].rawValue == Pin.ten.rawValue)
     }
 }
